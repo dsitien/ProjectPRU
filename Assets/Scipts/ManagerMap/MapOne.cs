@@ -19,8 +19,8 @@ public class MapOne : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] GameObject instructionPanel; // Panel thông báo
-    [SerializeField] Text instructionText; // Text thông báo
 
+    [SerializeField] Button playButton;
     private bool gameStarted = false;
 
     private void Awake()
@@ -32,17 +32,18 @@ public class MapOne : MonoBehaviour
 
         // Hiển thị thông báo nhiệm vụ
         instructionPanel.SetActive(true);
-        instructionText.text = "Press any key or click to start the mission!";
-        
+
+        playButton.onClick.AddListener(OnPlayButtonClick);
     }
 
-    private void Update()
+  
+
+    private void OnPlayButtonClick()
     {
-        if (!gameStarted && (Input.anyKeyDown || Input.GetMouseButtonDown(0)))
+        if (!gameStarted)
         {
             gameStarted = true;
             instructionPanel.SetActive(false);
-            
             StartCoroutine(StartMission());
         }
     }

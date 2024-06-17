@@ -39,7 +39,7 @@ public class Gun : MonoBehaviour
 		GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
 		Bullet goBullet = go.GetComponent<Bullet>();
 		goBullet.direction = direction;
-		AudioManager.Instance.PlaySFX("Dead");
+	
 		yield return new WaitForSeconds(shootEverySecond); 
 		canShoot = true;
 	}

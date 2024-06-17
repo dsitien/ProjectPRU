@@ -5,25 +5,27 @@ using UnityEngine.UI;
 
 public class UIControlSound : MonoBehaviour
 {
-  public Slider _musicSlider, _sfxSlider;
+   public Slider _musicSlider, _sfxSlider;
 
+    public AudioManager audio;
     public void ToggleMusic()
     {
-        AudioManager.Instance.ToggleMusic();
+        audio.ToggleMusic();
+        
     } 
     public void ToggleSfx()
     {
-        AudioManager.Instance.ToggleSFX();
+       audio.ToggleSFX();
     }
 
     public void MusicVolumn()
     {
-        AudioManager.Instance.MusicVolumn(_musicSlider.value);
+        audio.MusicVolumn(_musicSlider.value);
 
     }  
     public void SfxVolumn()
     {
-        AudioManager.Instance.SfxVolumn(_sfxSlider.value);
+        audio.SfxVolumn(_sfxSlider.value);
 
     }
 }

@@ -5,24 +5,9 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public  Sound[] musicSounds, sfxSounds;
+   public  Sound[] musicSounds, sfxSounds;
    public  AudioSource musicSource,sfxSource;
-
-
-    public static AudioManager Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+   
     private void Start()
     {
         PlayMusic("Menu");
@@ -68,7 +53,9 @@ public class AudioManager : MonoBehaviour
 
     public void MusicVolumn(float vol)
     {
+        
         musicSource.volume = vol;
+
     }
     public void SfxVolumn(float vol)
     {
