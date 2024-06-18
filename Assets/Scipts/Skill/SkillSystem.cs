@@ -217,7 +217,7 @@ public class SkillSystem : MonoBehaviour
     {
         foreach (Gun gun in guns)
         {
-            if (gun.powerUpLvRequirement == 2)
+            if (gun.powerUpLvRequirement == 1)
             {
                 gun.isActive = false;
                 gun.gameObject.SetActive(false);

@@ -1342,9 +1342,9 @@ MonoBehaviour:
   enemy3: {fileID: 935045503}
   boss: {fileID: 357277098}
   time1: 2
-  time2: 10
-  time3: 10
-  time4: 10
+  time2: 2
+  time3: 2
+  time4: 2
   instructionPanel: {fileID: 1128533683}
   playButton: {fileID: 415637443}
 --- !u!4 &838763533
