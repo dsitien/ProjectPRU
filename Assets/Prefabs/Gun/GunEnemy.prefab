@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6823426196882789700}
   - component: {fileID: -1251318622531544019}
+  - component: {fileID: -7809305213836693124}
   m_Layer: 7
   m_Name: GunEnemy
   m_TagString: Untagged
@@ -84,3 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7809305213836693124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132367314104835558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be382def97580e74bae829fb6672d794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3093782468173811584, guid: da6ef09ed81d1af4490a71b8e95412fc, type: 3}
+  shootEverySecond: 1
+  canShoot: 1
+  powerUpRequirement: 0

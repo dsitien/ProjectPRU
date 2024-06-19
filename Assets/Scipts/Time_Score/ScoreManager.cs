@@ -8,8 +8,14 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
+        if (scoreText == null)
+        {
+            Debug.LogError("Score Text UI element is not assigned in the Inspector!");
+            return;
+        }
+
         score = 0; // Khởi tạo điểm số là 0
-        UpdateScoreText(); // Cập nhật điểm số khi bắt đầu game
+        UpdateScoreText();
     }
 
     // Hàm để thêm điểm
@@ -22,6 +28,13 @@ public class ScoreManager : MonoBehaviour
     // Hàm để cập nhật Text UI hiển thị điểm số
     void UpdateScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score.ToString();
+        }
+        else
+        {
+            Debug.LogError("Score Text UI element is not assigned!");
+        }
     }
 }

@@ -66,6 +66,6 @@ public class MapOne : MonoBehaviour
         boss.SetActive(true);
 
         yield return new WaitForSeconds(20f);
-        SceneManager.LoadScene("Level1");
+       
     }
 }

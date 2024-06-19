@@ -21,8 +21,10 @@ public class PlayerAttack : MonoBehaviour
 
 	void Update()
 	{
+		
 		foreach (Gun gun in guns)
 		{
+			
 			if (gun.gameObject.activeSelf)
 			{
 				gun.isActive = true; // Kích hoạt chế độ auto-shoot

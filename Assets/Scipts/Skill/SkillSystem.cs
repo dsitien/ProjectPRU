@@ -7,6 +7,7 @@ public class SkillSystem : MonoBehaviour
 {
     public GameObject ship;
     Gun[] guns;
+
     [Header("Skill 1")]
     public Image skillImg1;
     public float cooldownQ = 3f;
@@ -25,15 +26,10 @@ public class SkillSystem : MonoBehaviour
     bool isCooldown3 = false;
     public Button button3;
 
-  
-    
     private void Awake()
     {
-        
-        
         guns = ship.GetComponentsInChildren<Gun>(true);
-        
-     
+
         if (skillImg1 != null) skillImg1.fillAmount = 1;
         if (skillImg2 != null) skillImg2.fillAmount = 1;
         if (skillImg3 != null) skillImg3.fillAmount = 1;
@@ -41,20 +37,15 @@ public class SkillSystem : MonoBehaviour
 
     void Start()
     {
-
-       
-       
         // Disable buttons at start if they are in cooldown
         if (button1 != null) button1.interactable = !isCooldown1;
         if (button2 != null) button2.interactable = !isCooldown2;
         if (button3 != null) button3.interactable = !isCooldown3;
-
-        
     }
 
     void Update()
     {
-        //skill 1
+        // Skill 1
         if (isCooldown1)
         {
             skillImg1.fillAmount += 1 / cooldownQ * Time.deltaTime;
@@ -64,13 +55,9 @@ public class SkillSystem : MonoBehaviour
                 isCooldown1 = false;
                 if (button1 != null) button1.interactable = true; // Enable button when cooldown is over
             }
-            if (skillImg1.fillAmount >= 0.9f && skillImg1.fillAmount <= 1f)
-            {
-                DisableActiveQ();
-            }
         }
 
-        //skill 2
+        // Skill 2
         if (isCooldown2)
         {
             skillImg2.fillAmount += 1 / cooldownW * Time.deltaTime;
@@ -80,13 +67,9 @@ public class SkillSystem : MonoBehaviour
                 isCooldown2 = false;
                 if (button2 != null) button2.interactable = true; // Enable button when cooldown is over
             }
-            if (skillImg2.fillAmount >= 0.9f && skillImg2.fillAmount <= 1f)
-            {
-                DisableActiveW();
-            }
         }
 
-        //skill 3
+        // Skill 3
         if (isCooldown3)
         {
             skillImg3.fillAmount += 1 / cooldownE * Time.deltaTime;
@@ -95,10 +78,6 @@ public class SkillSystem : MonoBehaviour
                 skillImg3.fillAmount = 1;
                 isCooldown3 = false;
                 if (button3 != null) button3.interactable = true; // Enable button when cooldown is over
-            }
-            if (skillImg3.fillAmount >= 0.5f && skillImg3.fillAmount <= 1f)
-            {
-                DisableActiveE();
             }
         }
 
@@ -123,30 +102,30 @@ public class SkillSystem : MonoBehaviour
     {
         if (isCooldown1)
         {
-            Debug.Log("Cooldown1");
+            Debug.Log("SkillQ is on cooldown");
         }
         else
         {
-           // Debug.Log("Skill 1 activated");
             isCooldown1 = true;
             if (skillImg1 != null) skillImg1.fillAmount = 0;
             if (button1 != null) button1.interactable = false;
             ActiveQ();
         }
     }
+
     public void ActiveQ()
     {
         foreach (Gun gun in guns)
         {
             if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
             {
-                gun.isActive = true;
                 gun.gameObject.SetActive(true);
-
+                gun.isActive = true;
+                Debug.Log($"Activated gun {gun.gameObject.name} with powerUpLvRequirement {gun.powerUpLvRequirement}");
             }
         }
-
     }
+
     void DisableActiveQ()
     {
         foreach (Gun gun in guns)
@@ -154,38 +133,39 @@ public class SkillSystem : MonoBehaviour
             if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
             {
                 gun.isActive = false;
-                gun.gameObject.SetActive(false);
+                Debug.Log($"Deactivated gun {gun.gameObject.name} with powerUpLvRequirement {gun.powerUpLvRequirement}");
             }
         }
     }
+
     public void SkillW()
     {
         if (isCooldown2)
         {
-            Debug.Log("Cooldown2");
+            Debug.Log("SkillW is on cooldown");
         }
         else
         {
-            ActiveW();
             isCooldown2 = true;
             if (skillImg2 != null) skillImg2.fillAmount = 0;
             if (button2 != null) button2.interactable = false;
-          
+            ActiveW();
         }
     }
+
     public void ActiveW()
     {
         foreach (Gun gun in guns)
         {
             if (gun.powerUpLvRequirement == 3)
             {
-                gun.isActive = true;
                 gun.gameObject.SetActive(true);
+                gun.isActive = true;
+                Debug.Log($"Activated gun {gun.gameObject.name} with powerUpLvRequirement {gun.powerUpLvRequirement}");
             }
         }
-
-
     }
+
     void DisableActiveW()
     {
         foreach (Gun gun in guns)
@@ -193,7 +173,7 @@ public class SkillSystem : MonoBehaviour
             if (gun.powerUpLvRequirement == 3)
             {
                 gun.isActive = false;
-                gun.gameObject.SetActive(false);
+                Debug.Log($"Deactivated gun {gun.gameObject.name} with powerUpLvRequirement {gun.powerUpLvRequirement}");
             }
         }
     }
@@ -202,37 +182,31 @@ public class SkillSystem : MonoBehaviour
     {
         if (isCooldown3)
         {
-            Debug.Log("Cooldown3");
+            Debug.Log("SkillE is on cooldown");
         }
         else
         {
-          
             isCooldown3 = true;
             if (skillImg3 != null) skillImg3.fillAmount = 0;
-            if (button3 != null) button3.interactable = false; 
+            if (button3 != null) button3.interactable = false;
             ActiveE();
         }
     }
-   
-   
+
     public void ActiveE()
     {
         foreach (Gun gun in guns)
         {
-                gun.shootEverySecond = 0.25f;
-            
+            gun.shootEverySecond = 0.25f;
+            Debug.Log($"Increased shoot speed for gun {gun.gameObject.name}");
         }
     }
-
-  
-
-   
 
     void DisableActiveE()
     {
         foreach (Gun gun in guns)
         {
-            if(gun.powerUpLvRequirement == 0)
+            if (gun.powerUpLvRequirement == 0)
             {
                 gun.shootEverySecond = 0.75f;
             }
@@ -240,6 +214,7 @@ public class SkillSystem : MonoBehaviour
             {
                 gun.shootEverySecond = 0.5f;
             }
+            Debug.Log($"Reset shoot speed for gun {gun.gameObject.name}");
         }
     }
 }

@@ -79,8 +79,8 @@ public class GunItem : MonoBehaviour
         {
             if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
             {
+
                 gun.isActive = false;
-                gun.gameObject.SetActive(false);
             }
         }
     }
@@ -92,7 +92,7 @@ public class GunItem : MonoBehaviour
             if (gun.powerUpLvRequirement == 1)
             {
                 gun.isActive = false;
-                gun.gameObject.SetActive(false);
+            
             }
         }
     }
