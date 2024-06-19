@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2113727033233772686
+--- !u!1 &5423281964775216348
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7185401418852208563}
-  - component: {fileID: 8438005643162362144}
+  - component: {fileID: 5694493341004916164}
+  - component: {fileID: 1121293853725512840}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: ManagerSkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7185401418852208563
+--- !u!4 &5694493341004916164
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113727033233772686}
+  m_GameObject: {fileID: 5423281964775216348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.424, y: 0.099, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8438005643162362144
+--- !u!114 &1121293853725512840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113727033233772686}
+  m_GameObject: {fileID: 5423281964775216348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3728001d2c7a458459b547b714e68ff6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3db4dbdb8fa3c334785d1e637ae6785f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpLvRequirement: 0
-  bullet: {fileID: 1540654532333901347, guid: c9623b106eac4b24db966fd92f32c0f2, type: 3}
-  bulletSprites:
-  - {fileID: 21300000, guid: 799c333656e8f6346bc92462105efd82, type: 3}
-  - {fileID: 21300000, guid: 1e2bcc6df69033b489f16892e907bee6, type: 3}
-  - {fileID: 21300000, guid: 3a55aec4260a8fe43a8696decb374e9d, type: 3}
-  - {fileID: 21300000, guid: e16d06612e775f648853907b2753cf1b, type: 3}
-  shootEverySecond: 0.75
-  isActive: 1
+  ship: {fileID: 0}

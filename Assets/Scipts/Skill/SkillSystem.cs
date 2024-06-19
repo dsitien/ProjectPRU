@@ -64,7 +64,7 @@ public class SkillSystem : MonoBehaviour
                 isCooldown1 = false;
                 if (button1 != null) button1.interactable = true; // Enable button when cooldown is over
             }
-            if (skillImg1.fillAmount >= 0.2f && skillImg1.fillAmount <= 1f)
+            if (skillImg1.fillAmount >= 0.9f && skillImg1.fillAmount <= 1f)
             {
                 DisableActiveQ();
             }
@@ -80,7 +80,7 @@ public class SkillSystem : MonoBehaviour
                 isCooldown2 = false;
                 if (button2 != null) button2.interactable = true; // Enable button when cooldown is over
             }
-            if (skillImg2.fillAmount >= 0.25f && skillImg2.fillAmount <= 1f)
+            if (skillImg2.fillAmount >= 0.9f && skillImg2.fillAmount <= 1f)
             {
                 DisableActiveW();
             }
@@ -134,7 +134,30 @@ public class SkillSystem : MonoBehaviour
             ActiveQ();
         }
     }
+    public void ActiveQ()
+    {
+        foreach (Gun gun in guns)
+        {
+            if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
+            {
+                gun.isActive = true;
+                gun.gameObject.SetActive(true);
 
+            }
+        }
+
+    }
+    void DisableActiveQ()
+    {
+        foreach (Gun gun in guns)
+        {
+            if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
+            {
+                gun.isActive = false;
+                gun.gameObject.SetActive(false);
+            }
+        }
+    }
     public void SkillW()
     {
         if (isCooldown2)
@@ -148,6 +171,30 @@ public class SkillSystem : MonoBehaviour
             if (skillImg2 != null) skillImg2.fillAmount = 0;
             if (button2 != null) button2.interactable = false;
           
+        }
+    }
+    public void ActiveW()
+    {
+        foreach (Gun gun in guns)
+        {
+            if (gun.powerUpLvRequirement == 3)
+            {
+                gun.isActive = true;
+                gun.gameObject.SetActive(true);
+            }
+        }
+
+
+    }
+    void DisableActiveW()
+    {
+        foreach (Gun gun in guns)
+        {
+            if (gun.powerUpLvRequirement == 3)
+            {
+                gun.isActive = false;
+                gun.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -166,32 +213,8 @@ public class SkillSystem : MonoBehaviour
             ActiveE();
         }
     }
-    public void ActiveQ()
-    {
-        foreach (Gun gun in guns)
-        {
-            if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
-            {
-                gun.isActive = true;
-                gun.gameObject.SetActive(true);
-
-            }
-        }
-      
-    }
-    public void ActiveW()
-    {
-        foreach (Gun gun in guns)
-        {
-            if (gun.powerUpLvRequirement == 1)
-            {
-                gun.isActive = true;
-                gun.gameObject.SetActive(true);
-            }
-        }
-
    
-    }
+   
     public void ActiveE()
     {
         foreach (Gun gun in guns)
@@ -201,29 +224,9 @@ public class SkillSystem : MonoBehaviour
         }
     }
 
-    void DisableActiveQ()
-    {
-        foreach (Gun gun in guns)
-        {
-            if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
-            {
-                gun.isActive = false;
-                gun.gameObject.SetActive(false);
-            }
-        }
-    }
+  
 
-    void DisableActiveW()
-    {
-        foreach (Gun gun in guns)
-        {
-            if (gun.powerUpLvRequirement == 1)
-            {
-                gun.isActive = false;
-                gun.gameObject.SetActive(false);
-            }
-        }
-    }
+   
 
     void DisableActiveE()
     {

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +7,8 @@ public class Bullet : MonoBehaviour
 	public Vector2 direction = new Vector2(0, 1);
 	public float speed;
 	public Vector2 velocity;
-	
-	
+
+
 	void Start()
 	{
 		
