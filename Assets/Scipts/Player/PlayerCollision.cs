@@ -55,4 +55,12 @@ public class PlayerCollision : MonoBehaviour
         color.a = alpha;
         spriteRenderer.color = color;
     }
+    public void Heal()
+    {
+        PlayerHeart.health++;
+        if(PlayerHeart.health > 3)
+        {
+            PlayerHeart.health = 3;
+        }
+    }
 }

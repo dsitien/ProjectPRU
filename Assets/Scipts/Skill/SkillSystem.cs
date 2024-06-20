@@ -124,6 +124,13 @@ public class SkillSystem : MonoBehaviour
                 Debug.Log($"Activated gun {gun.gameObject.name} with powerUpLvRequirement {gun.powerUpLvRequirement}");
             }
         }
+        StartCoroutine(DisableActiveQAfterDelay(cooldownQ / 2));
+    }
+
+    private IEnumerator DisableActiveQAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DisableActiveQ();
     }
 
     void DisableActiveQ()
@@ -132,6 +139,7 @@ public class SkillSystem : MonoBehaviour
         {
             if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
             {
+                gun.gameObject.SetActive(false);
                 gun.isActive = false;
                 Debug.Log($"Deactivated gun {gun.gameObject.name} with powerUpLvRequirement {gun.powerUpLvRequirement}");
             }
@@ -164,6 +172,13 @@ public class SkillSystem : MonoBehaviour
                 Debug.Log($"Activated gun {gun.gameObject.name} with powerUpLvRequirement {gun.powerUpLvRequirement}");
             }
         }
+        StartCoroutine(DisableActiveWAfterDelay(cooldownW / 2));
+    }
+
+    private IEnumerator DisableActiveWAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DisableActiveW();
     }
 
     void DisableActiveW()
@@ -172,6 +187,7 @@ public class SkillSystem : MonoBehaviour
         {
             if (gun.powerUpLvRequirement == 3)
             {
+                gun.gameObject.SetActive(false);
                 gun.isActive = false;
                 Debug.Log($"Deactivated gun {gun.gameObject.name} with powerUpLvRequirement {gun.powerUpLvRequirement}");
             }
@@ -200,6 +216,13 @@ public class SkillSystem : MonoBehaviour
             gun.shootEverySecond = 0.25f;
             Debug.Log($"Increased shoot speed for gun {gun.gameObject.name}");
         }
+        StartCoroutine(DisableActiveEAfterDelay(cooldownE / 2));
+    }
+
+    private IEnumerator DisableActiveEAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        DisableActiveE();
     }
 
     void DisableActiveE()

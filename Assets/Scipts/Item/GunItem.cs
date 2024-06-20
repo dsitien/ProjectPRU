@@ -7,7 +7,8 @@ public class GunItem : MonoBehaviour
     public GameObject ship;
     public bool VP1;
     public bool VP2;
-    public bool VP3;
+    public bool VP3; 
+    public bool VP4;
     Gun[] guns;
 
     private void Awake()
@@ -32,10 +33,23 @@ public class GunItem : MonoBehaviour
     {
         foreach (Gun gun in guns)
         {
-            if (gun.powerUpLvRequirement == 1)
+            if (gun.powerUpLvRequirement == 7)
             {
-                gun.isActive = true;
                 gun.gameObject.SetActive(true);
+                gun.isActive = true;
+               
+            }
+        }
+    }  
+    private void ActiveAllGun4()
+    {
+        foreach (Gun gun in guns)
+        {
+            if (gun.powerUpLvRequirement == 6)
+            {
+                gun.gameObject.SetActive(true);
+                gun.isActive = true;
+                
             }
         }
     }
@@ -44,10 +58,11 @@ public class GunItem : MonoBehaviour
     {
         foreach (Gun gun in guns)
         {
-            if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
+            if (gun.powerUpLvRequirement == 5)
             {
-                gun.isActive = true;
                 gun.gameObject.SetActive(true);
+                gun.isActive = true;
+               
             }
         }
     }
@@ -68,6 +83,10 @@ public class GunItem : MonoBehaviour
             case "VP3":
                 DeactivateAllGun3();
                 VP3 = false;
+                break; 
+            case "VP4":
+                DeactivateAllGun4();
+                VP4 = false;
                 break;
         }
         Destroy(gameObject);
@@ -77,9 +96,9 @@ public class GunItem : MonoBehaviour
     {
         foreach (Gun gun in guns)
         {
-            if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
+            if (gun.powerUpLvRequirement == 5)
             {
-
+                gun.gameObject.SetActive(false);
                 gun.isActive = false;
             }
         }
@@ -89,8 +108,21 @@ public class GunItem : MonoBehaviour
     {
         foreach (Gun gun in guns)
         {
-            if (gun.powerUpLvRequirement == 1)
+            if (gun.powerUpLvRequirement == 7)
             {
+                gun.gameObject.SetActive(false);
+                gun.isActive = false;
+            
+            }
+        }
+    }  
+    private void DeactivateAllGun4()
+    {
+        foreach (Gun gun in guns)
+        {
+            if (gun.powerUpLvRequirement == 6)
+            {
+                gun.gameObject.SetActive(false);
                 gun.isActive = false;
             
             }
@@ -125,6 +157,11 @@ public class GunItem : MonoBehaviour
             {
                 ActiveAllGun3();
                 StartCoroutine(DisableAfterTime(5f, "VP3"));
+            }  
+            if (VP4)
+            {
+                ActiveAllGun4();
+                StartCoroutine(DisableAfterTime(5f, "VP4"));
             }
             HideItem();
         }
