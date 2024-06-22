@@ -7,10 +7,10 @@ public class AudioManager : MonoBehaviour
 {
    public  Sound[] musicSounds, sfxSounds;
    public  AudioSource musicSource,sfxSource;
-   
+    public string musicName;
     private void Start()
     {
-        PlayMusic("Menu");
+        PlayMusic(musicName);
        // PlaySFX("Dead");
     }
     public void PlayMusic(string name)

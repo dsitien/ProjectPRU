@@ -1,10 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinGame : MonoBehaviour
 {
     public GameObject winGamePanel;
-
+    public int map;
     private void Awake()
     {
         winGamePanel.SetActive(false);
@@ -25,5 +26,9 @@ public class WinGame : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         ShowWinGamePanel();
+    }
+    public void Next()
+    {
+        SceneManager.LoadScene(map);
     }
 }

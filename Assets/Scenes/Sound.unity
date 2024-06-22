@@ -356,6 +356,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 1871354255}
+    - target: {fileID: 3761003473823154903, guid: b0300b0f374f4b34b8de9b29d66938bf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3791502810499334003, guid: b0300b0f374f4b34b8de9b29d66938bf, type: 3}
       propertyPath: m_Name
       value: Ship
@@ -1225,6 +1229,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1764300053055733393, guid: bb785cabf4bebb840bfbb9aac845712c, type: 3}
+      propertyPath: musicName
+      value: Map2
+      objectReference: {fileID: 0}
     - target: {fileID: 5965383419634055539, guid: bb785cabf4bebb840bfbb9aac845712c, type: 3}
       propertyPath: m_Name
       value: AudioManager
