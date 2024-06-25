@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2278529118256917905}
   - component: {fileID: 227242301167290037}
   - component: {fileID: 6323987097325327694}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4585614080841883931}
   - component: {fileID: 959432926395936893}
   - component: {fileID: 7953075791008850018}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 8476893336450579570}
   - component: {fileID: 8538694209921536103}
   - component: {fileID: 3894422992905871115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boss 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 267189165117442885}
   - component: {fileID: 835659584508440776}
   - component: {fileID: 5017245446999678836}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}

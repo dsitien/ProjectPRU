@@ -50,6 +50,7 @@ public class Gun : MonoBehaviour
             GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
             Bullet goBullet = go.GetComponent<Bullet>();
             goBullet.direction = direction;
+          
             if (audioManager != null)
             {
                 audioManager.PlaySFX("Gun");

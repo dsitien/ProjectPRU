@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2358408428656756466}
   - component: {fileID: 2163572376587822106}
   - component: {fileID: 7912997391247301535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulletBoss2
   m_TagString: BulletEnemy
   m_Icon: {fileID: 0}

@@ -8,6 +8,7 @@ public class ChangeSkinAll : MonoBehaviour
     public GameObject skin;
     private void Awake()
     {
+      
         skin.SetActive(false);
     }
     public void ChangeBulletAndShipSkin(int skinIndex)
