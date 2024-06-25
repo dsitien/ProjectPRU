@@ -326,6 +326,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d1e122eb76a53684badbe9b9114c701b, type: 3}
   - name: Speed
     clip: {fileID: 8300000, guid: 8cee9d82df82c554e84016c25114e6aa, type: 3}
+  - name: BulletDestroy
+    clip: {fileID: 8300000, guid: 189c07f4dad0a61458fd50d78fbf00f2, type: 3}
   musicSource: {fileID: 2897112731870974479}
   sfxSource: {fileID: 3582804709760569291}
-  musicName: Map1
+  musicName: Map6

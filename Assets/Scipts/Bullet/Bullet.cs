@@ -8,11 +8,20 @@ public class Bullet : MonoBehaviour
 	public float speed;
 	public Vector2 velocity;
 
-
+	private AudioManager audioManager;
 	void Start()
 	{
-		
-		Destroy(gameObject, 4);
+        GameObject audioManagerObject = GameObject.Find("AudioManager");
+        if (audioManagerObject != null)
+        {
+            audioManager = audioManagerObject.GetComponent<AudioManager>();
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager not found in the scene");
+        }
+
+        Destroy(gameObject, 4);
 		//DontDestroyOnLoad(gameObject);
 	}
 
@@ -39,7 +48,11 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy")) {
 			Destroy(gameObject);
-			//Destroy(collision.gameObject);
+            if (audioManager != null)
+            {
+                audioManager.PlaySFX("BulletDestroy");
+            }
+            Destroy(collision.gameObject);
 		}
     }
 }

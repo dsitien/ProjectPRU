@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 184156733043712830}
   - component: {fileID: 4976203665904686482}
   - component: {fileID: 5525857826528609475}
+  - component: {fileID: 195193204339987036}
   m_Layer: 0
   m_Name: HealthPostionItem
   m_TagString: Untagged
@@ -134,3 +135,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.575
+--- !u!114 &195193204339987036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121903187710758690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb49f7ab065f4e4ea0dd158fe840d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 1}
+  speed: 3
+  velocity: {x: 0, y: 0}
+  timeDestroy: 0

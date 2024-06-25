@@ -6,64 +6,74 @@ public class Gun : MonoBehaviour
 {
     public int powerUpLvRequirement = 0;
     public Bullet bullet;
-    public List<Sprite> bulletSprites; // Danh sách các sprite của viên đạn
-    private int currentBulletSpriteIndex = 0; // Chỉ số sprite hiện tại
+    public List<Sprite> bulletSprites;
+    private int currentBulletSpriteIndex = 0;
     Vector2 direction;
 
-    public float shootEverySecond;
-
-    bool canShoot = true;
+    public float shootEverySecond = 1f;
 
     public bool isActive = false;
+    private AudioManager audioManager;
+    private Coroutine shootingCoroutine;
 
     void Start()
     {
+        GameObject audioManagerObject = GameObject.Find("AudioManager");
+        if (audioManagerObject != null)
+        {
+            audioManager = audioManagerObject.GetComponent<AudioManager>();
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager not found in the scene");
+        }
         direction = (transform.localRotation * Vector2.up).normalized;
     }
 
     void Update()
     {
-        if (!isActive) return;
-
-        // Tính toán hướng bắn
-        direction = (transform.localRotation * Vector2.up).normalized;
-
-        // Tự động bắn
-        if (canShoot)
+        if (isActive && shootingCoroutine == null)
         {
-            StartCoroutine(Shooting());
+            shootingCoroutine = StartCoroutine(Shooting());
+        }
+        else if (!isActive && shootingCoroutine != null)
+        {
+            StopCoroutine(shootingCoroutine);
+            shootingCoroutine = null;
         }
     }
 
     private IEnumerator Shooting()
     {
-        canShoot = false;
-      
-
-        GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
-        Bullet goBullet = go.GetComponent<Bullet>();
-        goBullet.direction = direction;
-
-        // Thay đổi sprite viên đạn ngay khi nó được instantiate
-        SpriteRenderer bulletSpriteRenderer = go.GetComponent<SpriteRenderer>();
-        if (bulletSpriteRenderer != null)
+        while (isActive)
         {
-            if (currentBulletSpriteIndex >= 0 && currentBulletSpriteIndex < bulletSprites.Count)
+            GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
+            Bullet goBullet = go.GetComponent<Bullet>();
+            goBullet.direction = direction;
+            if (audioManager != null)
             {
-                bulletSpriteRenderer.sprite = bulletSprites[currentBulletSpriteIndex];
+                audioManager.PlaySFX("Gun");
+            }
+
+            SpriteRenderer bulletSpriteRenderer = go.GetComponent<SpriteRenderer>();
+            if (bulletSpriteRenderer != null)
+            {
+                if (currentBulletSpriteIndex >= 0 && currentBulletSpriteIndex < bulletSprites.Count)
+                {
+                    bulletSpriteRenderer.sprite = bulletSprites[currentBulletSpriteIndex];
+                }
+                else
+                {
+                    Debug.LogWarning("Sprite index out of range");
+                }
             }
             else
             {
-                Debug.LogWarning("Sprite index out of range");
+                Debug.LogError("SpriteRenderer is missing on Bullet prefab.");
             }
-        }
-        else
-        {
-            Debug.LogError("SpriteRenderer is missing on Bullet prefab.");
-        }
 
-        yield return new WaitForSeconds(shootEverySecond);
-        canShoot = true;
+            yield return new WaitForSeconds(shootEverySecond);
+        }
     }
 
     public void ChangeBulletSprite(int spriteIndex)

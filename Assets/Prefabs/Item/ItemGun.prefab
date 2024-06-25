@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8745686298351039443}
   - component: {fileID: 2395457334735080405}
   - component: {fileID: 1871023935284504285}
+  - component: {fileID: 4181915361760435840}
   m_Layer: 0
   m_Name: ItemGun
   m_TagString: Item
@@ -99,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9539406505c69c447a477b39299c2962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ship: {fileID: 0}
   VP1: 0
   VP2: 0
   VP3: 0
@@ -176,3 +176,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &4181915361760435840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560116450008529022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb49f7ab065f4e4ea0dd158fe840d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 1}
+  speed: 2
+  velocity: {x: 0, y: 0}
+  timeDestroy: 0

@@ -30,5 +30,6 @@ public class WinGame : MonoBehaviour
     public void Next()
     {
         SceneManager.LoadScene(map);
+        Time.timeScale = 1f;
     }
 }
