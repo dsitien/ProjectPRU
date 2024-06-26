@@ -26,16 +26,20 @@ public class MapOne : MonoBehaviour
     [SerializeField] Button playButton;
     private bool gameStarted = false;
 
+  
     private void Awake()
     {
+      
         enemy1.SetActive(false);
         enemy2.SetActive(false);
         enemy3.SetActive(false);
         boss.SetActive(false);
         item.SetActive(false);
+       
 
+      
         // Hiển thị thông báo nhiệm vụ
-        instructionPanel.SetActive(true);
+       instructionPanel.SetActive(true);
 
         playButton.onClick.AddListener(OnPlayButtonClick);
     }
@@ -49,6 +53,7 @@ public class MapOne : MonoBehaviour
         {
             gameStarted = true;
             instructionPanel.SetActive(false);
+           
             StartCoroutine(StartMission());
         }
     }

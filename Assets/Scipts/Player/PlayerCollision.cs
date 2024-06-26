@@ -31,6 +31,7 @@ public class PlayerCollision : MonoBehaviour
         PlayerHeart.health--;
         if (PlayerHeart.health <= 0)
         {
+            PlayerHeart.health = 0;
             // Xử lý khi hết máu (ví dụ: kết thúc game, hiển thị thông báo thua)
         }
         else

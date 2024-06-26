@@ -18,6 +18,7 @@ public class Gun : MonoBehaviour
 
     void Start()
     {
+      
         GameObject audioManagerObject = GameObject.Find("AudioManager");
         if (audioManagerObject != null)
         {
@@ -27,16 +28,44 @@ public class Gun : MonoBehaviour
         {
             Debug.LogWarning("AudioManager not found in the scene");
         }
+      
         direction = (transform.localRotation * Vector2.up).normalized;
+
+    }
+
+    void OnEnable()
+    {
+        if (isActive)
+        {
+            StartShooting();
+        }
+    }
+
+    void OnDisable()
+    {
+        StopShooting();
     }
 
     void Update()
     {
         if (isActive && shootingCoroutine == null)
         {
-            shootingCoroutine = StartCoroutine(Shooting());
+            StartShooting();
         }
         else if (!isActive && shootingCoroutine != null)
+        {
+            StopShooting();
+        }
+    }
+
+    private void StartShooting()
+    {
+        shootingCoroutine = StartCoroutine(Shooting());
+    }
+
+    private void StopShooting()
+    {
+        if (shootingCoroutine != null)
         {
             StopCoroutine(shootingCoroutine);
             shootingCoroutine = null;
@@ -50,7 +79,7 @@ public class Gun : MonoBehaviour
             GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
             Bullet goBullet = go.GetComponent<Bullet>();
             goBullet.direction = direction;
-          
+
             if (audioManager != null)
             {
                 audioManager.PlaySFX("Gun");

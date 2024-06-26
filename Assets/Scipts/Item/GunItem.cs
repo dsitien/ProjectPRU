@@ -15,7 +15,9 @@ public class GunItem : MonoBehaviour
     {
         ship = GameObject.Find("Ship");
         guns = ship.GetComponentsInChildren<Gun>(true);
+
     }
+
 
     void Update()
     {

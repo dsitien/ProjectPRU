@@ -4,13 +4,29 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public int score; // Điểm số của người chơi
-    public Text scoreText; // Text UI để hiển thị điểm số
+    public string scoreTextObjectName = "Score"; // Tên của GameObject chứa Text UI
+    private Text scoreText; // Text UI để hiển thị điểm số
 
     void Start()
     {
-        if (scoreText == null)
+        // Tìm đối tượng Text trong Scene
+        GameObject scoreTextObject = GameObject.Find(scoreTextObjectName);
+
+        // Kiểm tra xem đối tượng có được tìm thấy hay không
+        if (scoreTextObject != null)
         {
-            Debug.LogError("Score Text UI element is not assigned in the Inspector!");
+            // Lấy component Text từ đối tượng
+            scoreText = scoreTextObject.GetComponent<Text>();
+
+            if (scoreText == null)
+            {
+                Debug.LogError("Text component is not found on the ScoreText GameObject!");
+                return;
+            }
+        }
+        else
+        {
+            Debug.LogError("Score Text GameObject is not found!");
             return;
         }
 
@@ -30,7 +46,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text = score.ToString();
         }
         else
         {

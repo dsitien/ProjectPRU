@@ -6,17 +6,23 @@ public class PlayerAttack : MonoBehaviour
 {
 	Gun[] guns;
 
-	void Start()
-	{
-		guns = transform.GetComponentsInChildren<Gun>();
-		foreach (Gun gun in guns)
-		{
+    private void Awake()
+    {
+        guns = transform.GetComponentsInChildren<Gun>();
+        foreach (Gun gun in guns)
+        {
             gun.gameObject.SetActive(true);
+            gun.isActive = true;
             if (gun.powerUpLvRequirement != 0)
-			{
-				gun.gameObject.SetActive(false);
-			}
-		}
+            {
+                gun.isActive = false;
+                gun.gameObject.SetActive(false);
+            }
+        }
+    }
+    void Start()
+	{
+		
 	}
 
 	void Update()

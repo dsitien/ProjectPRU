@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic(musicName);
+       
        // PlaySFX("Dead");
     }
     public void PlayMusic(string name)
@@ -23,6 +24,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             musicSource.clip = s.clip;
+           
             musicSource.Play();
         }
     }
