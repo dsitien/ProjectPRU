@@ -33,44 +33,20 @@ public class Gun : MonoBehaviour
 
     }
 
-    void OnEnable()
-    {
-        if (isActive)
-        {
-            StartShooting();
-        }
-    }
-
-    void OnDisable()
-    {
-        StopShooting();
-    }
-
+   
     void Update()
     {
         if (isActive && shootingCoroutine == null)
         {
-            StartShooting();
+            shootingCoroutine = StartCoroutine(Shooting());
         }
         else if (!isActive && shootingCoroutine != null)
-        {
-            StopShooting();
-        }
-    }
-
-    private void StartShooting()
-    {
-        shootingCoroutine = StartCoroutine(Shooting());
-    }
-
-    private void StopShooting()
-    {
-        if (shootingCoroutine != null)
         {
             StopCoroutine(shootingCoroutine);
             shootingCoroutine = null;
         }
     }
+
 
     private IEnumerator Shooting()
     {

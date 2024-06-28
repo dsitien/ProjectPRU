@@ -2288,7 +2288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7063770625922521291, guid: ca819408bd071004fa55938b26c9d851, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.356873
+      value: 19.356934
       objectReference: {fileID: 0}
     - target: {fileID: 7063770625922521291, guid: ca819408bd071004fa55938b26c9d851, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2718,6 +2718,10 @@ PrefabInstance:
     - target: {fileID: 2759681729517554099, guid: 458d51e2a613d5a499b7ae0db7478f3e, type: 3}
       propertyPath: m_Name
       value: ManagerMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759681729517554099, guid: 458d51e2a613d5a499b7ae0db7478f3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4130086928227387557, guid: 458d51e2a613d5a499b7ae0db7478f3e, type: 3}
       propertyPath: playButton
