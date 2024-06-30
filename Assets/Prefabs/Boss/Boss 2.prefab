@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 5
   currentHealth: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 8142942778459560959, guid: e2290af635c3e2045a873eb5feb138a2, type: 3}
   healthBarFill: {fileID: 2252820891505055629}
   currentPhase: 0
 --- !u!61 &3844139756258684971

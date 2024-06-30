@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 3894422992905871115}
   m_Layer: 7
   m_Name: Boss 3
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +257,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: eec3db7f0a125dc409cf7a5ef8aae820, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 10
   currentHealth: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 8142942778459560959, guid: e2290af635c3e2045a873eb5feb138a2, type: 3}
   healthBarFill: {fileID: 6323987097325327694}
   currentPhase: 0
 --- !u!50 &8538694209921536103
