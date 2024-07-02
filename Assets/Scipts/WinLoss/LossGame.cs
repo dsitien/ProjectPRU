@@ -1,18 +1,37 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class LossGame : MonoBehaviour
+public class GameLoss : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject gameLossPanel;
+    public int map;
+
+    private void Awake()
     {
-        
+        gameLossPanel.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowGameLossPanel()
     {
-        
+        gameLossPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void TriggerGameLossPanelWithDelay(float delay)
+    {
+        StartCoroutine(ShowGameLossPanelAfterDelay(delay));
+    }
+
+    private IEnumerator ShowGameLossPanelAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ShowGameLossPanel();
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(map);
+        Time.timeScale = 1f;
     }
 }

@@ -13,8 +13,7 @@ public class Map : MonoBehaviour
     [SerializeField] GameObject enemy2;
     [SerializeField] GameObject enemy3;
     [SerializeField] GameObject enemy4; 
-    [SerializeField] GameObject enemy5; 
-    [SerializeField] GameObject enemy6;
+   
     [SerializeField] GameObject boss;
 
     [Header("Item Object")]
@@ -27,8 +26,7 @@ public class Map : MonoBehaviour
     [SerializeField] float time2;
     [SerializeField] float time3;
     [SerializeField] float time4;
-    [SerializeField] float time5;
-    [SerializeField] float time6;
+   
      [SerializeField] float timeBoss;
 
 
@@ -47,8 +45,7 @@ public class Map : MonoBehaviour
         enemy2.SetActive(false);
         enemy3.SetActive(false);
         enemy4.SetActive(false);
-        enemy5.SetActive(false);
-        enemy6.SetActive(false);
+     
         boss.SetActive(false);
         item1.SetActive(false);
         item2.SetActive(false);
@@ -69,7 +66,7 @@ public class Map : MonoBehaviour
         {
             gameStarted = true;
             instructionPanel.SetActive(false);
-
+            Timer.instance.StartTimer();
             StartCoroutine(StartMission());
         }
     }
@@ -96,18 +93,9 @@ public class Map : MonoBehaviour
         enemy3.SetActive(false);
         enemy4.SetActive(true);
 
-         yield return new WaitForSeconds(time5);
-        enemy4.SetActive(false);
-        enemy5.SetActive(true);
-        item2.SetActive(true) ;
-
-        yield return new WaitForSeconds(time6);
-        enemy5.SetActive(false);
-        enemy6.SetActive(true);
-        item2.SetActive(false); 
         
         yield return new WaitForSeconds(timeBoss);
-        enemy6.SetActive(false);
+        enemy4.SetActive(false);
         boss.SetActive(true);
         item3.SetActive(true);
 

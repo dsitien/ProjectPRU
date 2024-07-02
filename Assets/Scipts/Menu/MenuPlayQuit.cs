@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuPlayQuit : MonoBehaviour
 {
     // Start is called before the first frame update
-    public AudioSource sound_Menu;
+    //public AudioSource sound_Menu;
     public void Play() {
-        sound_Menu.Stop();
-        SceneManager.LoadScene("Test");
+       
+        SceneManager.LoadScene("MapGame1");
     }
     public void Sound() {
        

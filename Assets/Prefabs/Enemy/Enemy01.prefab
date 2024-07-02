@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1260628362852883232}
   - component: {fileID: 4423757434050614577}
   - component: {fileID: 3660489902069360793}
+  - component: {fileID: -8610526188539833684}
+  - component: {fileID: -2620020583353021505}
   m_Layer: 7
   m_Name: Enemy01
   m_TagString: Enemy
@@ -196,3 +198,28 @@ MonoBehaviour:
   speed: 4
   offsetDestroy: 1
   isActive: 1
+--- !u!114 &-8610526188539833684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654963798444007031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2352d701a4e6d47b3850d8039ea5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2620020583353021505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654963798444007031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc6a01bb51aac04d8d447f50d8f02bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 10

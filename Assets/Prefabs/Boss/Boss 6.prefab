@@ -103,7 +103,7 @@ RectTransform:
   m_GameObject: {fileID: 4372422477904088480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3539823, y: 0.4790419, z: 1}
+  m_LocalScale: {x: 0.170354, y: 0.4610778, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5783553637154107991}
@@ -112,7 +112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.7722428, y: 0.3821242}
+  m_AnchoredPosition: {x: -0.86, y: 0.19}
   m_SizeDelta: {x: 10, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3984368219821789069
@@ -193,9 +193,10 @@ GameObject:
   - component: {fileID: 1715304306878983350}
   - component: {fileID: 7971382487555268960}
   - component: {fileID: 2005462656174856185}
+  - component: {fileID: 367405195430451576}
   m_Layer: 7
   m_Name: Boss 6
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,6 +395,18 @@ MonoBehaviour:
   explosion: {fileID: 8142942778459560959, guid: e2290af635c3e2045a873eb5feb138a2, type: 3}
   healthBarFill: {fileID: 1840749810205249070}
   currentPhase: 0
+--- !u!114 &367405195430451576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266001452577760201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a135834e4ec3e4e8de30d3163199d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8863852805875834142
 GameObject:
   m_ObjectHideFlags: 0

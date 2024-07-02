@@ -39,6 +39,9 @@ public class ScoreManager : MonoBehaviour
     {
         score += value;
         UpdateScoreText(); // Cập nhật điểm số mỗi khi có sự thay đổi
+
+        // Kiểm tra điều kiện nếu điểm bằng 300
+    
     }
 
     // Hàm để cập nhật Text UI hiển thị điểm số

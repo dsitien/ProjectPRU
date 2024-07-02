@@ -16,9 +16,12 @@ public class Gun : MonoBehaviour
     private AudioManager audioManager;
     private Coroutine shootingCoroutine;
 
+    private void Awake()
+    {
+        direction = (transform.localRotation * Vector2.up).normalized;
+    }
     void Start()
     {
-      
         GameObject audioManagerObject = GameObject.Find("AudioManager");
         if (audioManagerObject != null)
         {
@@ -28,25 +31,53 @@ public class Gun : MonoBehaviour
         {
             Debug.LogWarning("AudioManager not found in the scene");
         }
-      
-        direction = (transform.localRotation * Vector2.up).normalized;
 
+      
     }
 
-   
+    void OnEnable()
+    {
+        // Ensure isActive state is handled properly when the object is enabled
+        if (isActive)
+        {
+            StartShooting();
+        }
+    }
+
+    void OnDisable()
+    {
+        // Stop shooting when the object is disabled
+        StopShooting();
+    }
+
     void Update()
     {
+        // Check isActive state and manage shooting coroutine
         if (isActive && shootingCoroutine == null)
         {
-            shootingCoroutine = StartCoroutine(Shooting());
+            StartShooting();
         }
         else if (!isActive && shootingCoroutine != null)
+        {
+            StopShooting();
+        }
+    }
+
+    void StartShooting()
+    {
+        // Start the shooting coroutine
+        shootingCoroutine = StartCoroutine(Shooting());
+    }
+
+    void StopShooting()
+    {
+        // Stop the shooting coroutine if it's running
+        if (shootingCoroutine != null)
         {
             StopCoroutine(shootingCoroutine);
             shootingCoroutine = null;
         }
     }
-
 
     private IEnumerator Shooting()
     {

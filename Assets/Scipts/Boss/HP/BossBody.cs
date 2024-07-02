@@ -17,7 +17,7 @@ public class BossBody : MonoBehaviour
     GunScript3[] guns;
     int powerUpGun = 0;
 
-   // Laser[] lazers;
+    Laser[] lazers;
 
     public enum BossPhase { PhaseOne, PhaseTwo, PhaseThree }
     public BossPhase currentPhase;
@@ -50,17 +50,17 @@ public class BossBody : MonoBehaviour
 
 
 
-        //lazers = transform.GetComponentsInChildren<Laser>();
-        //foreach (Laser laser in lazers)
-        //{
-        //    laser.isAutoShoot = true;
-        //    if (laser.powerUpRequirement != 0)
-        //    {
-        //        laser.gameObject.SetActive(false);
-        //    }
+        lazers = transform.GetComponentsInChildren<Laser>();
+        foreach (Laser laser in lazers)
+        {
+            laser.isAutoShoot = true;
+            if (laser.powerUpRequirement != 0)
+            {
+                laser.gameObject.SetActive(false);
+            }
 
 
-        //}
+        }
 
 
 
@@ -74,23 +74,23 @@ public class BossBody : MonoBehaviour
         CheckPhaseChange();
     }
 
-     void UpdateHealthBar()
+    void UpdateHealthBar()
     {
         healthBarFill.fillAmount = currentHealth / MaxHealth;
     }
 
     public void Hit()
     {
-      
-            currentHealth--;
-            currentHealth = Mathf.Clamp(currentHealth, 0, MaxHealth);
-            UpdateHealthBar();
-            if (currentHealth == 0)
-            {
-                DestroyShip();
-            }
-            
-   
+
+        currentHealth--;
+        currentHealth = Mathf.Clamp(currentHealth, 0, MaxHealth);
+        UpdateHealthBar();
+        if (currentHealth == 0)
+        {
+            DestroyShip();
+        }
+
+
     }
 
 
@@ -103,7 +103,7 @@ public class BossBody : MonoBehaviour
             Debug.Log("hi");
         }
 
-       
+
 
 
 
@@ -114,7 +114,7 @@ public class BossBody : MonoBehaviour
     void DestroyShip()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
-        
+
         Debug.Log("die");
         // levelControler.instance.RemoveEnemy();
         Destroy(gameObject);
@@ -138,19 +138,19 @@ public class BossBody : MonoBehaviour
         }
 
 
-        //foreach (Laser laser in lazers)
-        //{
-        //    if (laser.powerUpRequirement == powerUpGun)
-        //    {
-        //        laser.gameObject.SetActive(true);
-        //    }
-        //    else if (laser.powerUpRequirement > powerUpGun)
-        //    {
-        //        laser.gameObject.SetActive(false);
-        //    }
+        foreach (Laser laser in lazers)
+        {
+            if (laser.powerUpRequirement == powerUpGun)
+            {
+                laser.gameObject.SetActive(true);
+            }
+            else if (laser.powerUpRequirement > powerUpGun)
+            {
+                laser.gameObject.SetActive(false);
+            }
 
 
-        //}
+        }
 
 
 

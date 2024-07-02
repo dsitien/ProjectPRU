@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1555093281410201948}
   - component: {fileID: 1990516466033945312}
   - component: {fileID: 5641616478773054208}
+  - component: {fileID: 5209056029435747692}
+  - component: {fileID: -3984931348978330116}
   m_Layer: 7
   m_Name: Enemy08
   m_TagString: Enemy
@@ -106,3 +108,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5209056029435747692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2779644214885550214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2352d701a4e6d47b3850d8039ea5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3984931348978330116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2779644214885550214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc6a01bb51aac04d8d447f50d8f02bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 10

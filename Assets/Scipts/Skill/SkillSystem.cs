@@ -52,6 +52,7 @@ public class SkillSystem : MonoBehaviour
                 skillImg1.fillAmount = 1;
                 isCooldown1 = false;
                 if (button1 != null) button1.interactable = true;
+                Debug.Log("SkillQ is ready again");
             }
         }
 
@@ -63,6 +64,7 @@ public class SkillSystem : MonoBehaviour
                 skillImg2.fillAmount = 1;
                 isCooldown2 = false;
                 if (button2 != null) button2.interactable = true;
+                Debug.Log("SkillW is ready again");
             }
         }
 
@@ -74,6 +76,7 @@ public class SkillSystem : MonoBehaviour
                 skillImg3.fillAmount = 1;
                 isCooldown3 = false;
                 if (button3 != null) button3.interactable = true;
+                Debug.Log("SkillE is ready again");
             }
         }
 
@@ -137,6 +140,7 @@ public class SkillSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         DisableActiveQ();
+        Debug.Log("SkillQ deactivated after delay");
     }
 
     public void SkillW()
@@ -183,6 +187,7 @@ public class SkillSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         DisableActiveW();
+        Debug.Log("SkillW deactivated after delay");
     }
 
     public void SkillE()
@@ -230,5 +235,6 @@ public class SkillSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         DisableActiveE();
+        Debug.Log("SkillE deactivated after delay");
     }
 }

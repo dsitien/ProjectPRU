@@ -15,6 +15,7 @@ public class Laser : MonoBehaviour
 
     public float timeShoot = 1f;
     public float timeDelay = 10f;
+    public float AnimationTime = 1f;
 
     public bool isEnemy = false;
 
@@ -73,32 +74,39 @@ public class Laser : MonoBehaviour
         RaycastHit2D _hit = Physics2D.Raycast(laserFirePoint.position, transform.right);
         if (_hit.collider != null)
         {
-            Debug.Log("Laser hit: " + _hit.collider.name);
-
-            if (isEnemy)
+            if (_hit.collider.CompareTag("Player") || _hit.collider.CompareTag("Boss"))
             {
-                if (_hit.collider.CompareTag("Player"))
+                Debug.Log("Laser hit: " + _hit.collider.name);
+
+                if (isEnemy)
                 {
-                    PlayerCollision ship = _hit.collider.GetComponent<PlayerCollision>();
-                    if (ship != null)
+                    if (_hit.collider.CompareTag("Player"))
                     {
-                        ship.hit();
+                        PlayerCollision ship = _hit.collider.GetComponent<PlayerCollision>();
+                        if (ship != null)
+                        {
+                            ship.hit();
+                        }
                     }
                 }
+                else
+                {
+                    if (_hit.collider.CompareTag("Boss"))
+                    {
+                        BossBody boss = _hit.collider.GetComponent<BossBody>();
+                        if (boss != null)
+                        {
+                            boss.Hit();
+                        }
+
+                    }
+                }
+                Draw2DRay(laserFirePoint.position, _hit.point);
             }
             else
             {
-                if (_hit.collider.CompareTag("Boss"))
-                {
-                    BossBody boss = _hit.collider.GetComponent<BossBody>();
-                    if (boss != null)
-                    {
-                        boss.Hit();
-                    }
-                }
+                Draw2DRay(laserFirePoint.position, laserFirePoint.position + (Vector3)transform.right * defDistanceRay);
             }
-
-            Draw2DRay(laserFirePoint.position, _hit.point);
         }
         else
         {
@@ -149,7 +157,7 @@ public class Laser : MonoBehaviour
         {
             GameObject effectInstance = Instantiate(effectGun, transform.position, Quaternion.Euler(0, 0, 90));
             StartCoroutine(UpdateEffectPosition(effectInstance));
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(AnimationTime);
 
             ShootLaser();
             yield return new WaitForSeconds(timeShoot); // Laser fires for 1 second
@@ -163,7 +171,7 @@ public class Laser : MonoBehaviour
     {
         GameObject effectInstance = Instantiate(effectGun, transform.position, Quaternion.Euler(0, 0, 90));
         StartCoroutine(UpdateEffectPosition(effectInstance));
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(AnimationTime);
         ShootLaser();
         yield return new WaitForSeconds(timeShoot); // Laser fires for 1 second
         Debug.Log("in here");

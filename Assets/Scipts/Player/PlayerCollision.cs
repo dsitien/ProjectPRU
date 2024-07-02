@@ -6,8 +6,7 @@ using static UnityEditor.Progress;
 
 public class PlayerCollision : MonoBehaviour
 {
-    public event Action ShieldDeactivated; // Sự kiện để thông báo khi Shield kết thúc
-
+    public GameObject explosion;
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
     private bool isShielded = false; // Biến để kiểm tra xem người chơi có đang trong trạng thái bảo vệ hay không
@@ -208,7 +207,11 @@ public class PlayerCollision : MonoBehaviour
         if (PlayerHeart.health <= 0)
         {
             PlayerHeart.health = 0;
-            // Xử lý khi hết máu (ví dụ: kết thúc game, hiển thị thông báo thua)
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            GetComponent<PlayerMove>().enabled = false;
+
+            GameLoss gameLoss = GameObject.Find("LossGame").GetComponent<GameLoss>();
+            gameLoss.TriggerGameLossPanelWithDelay(2f);
         }
         else
         {

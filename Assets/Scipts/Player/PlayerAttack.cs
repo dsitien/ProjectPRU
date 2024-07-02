@@ -4,35 +4,40 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-	Gun[] guns;
+    Gun[] guns;
 
     private void Awake()
     {
         guns = transform.GetComponentsInChildren<Gun>();
+    }
+
+    void Start()
+    {
         foreach (Gun gun in guns)
         {
-            gun.gameObject.SetActive(true);
-            gun.isActive = true;
-            if (gun.powerUpLvRequirement != 0)
+            if (gun.powerUpLvRequirement == 0)
+            {
+                gun.gameObject.SetActive(true);
+                gun.isActive = true;
+            }
+            else
             {
                 gun.isActive = false;
                 gun.gameObject.SetActive(false);
             }
         }
     }
-    void Start()
-	{
-		
-	}
 
-	void Update()
-	{
-		
-            foreach (Gun gun in guns)
-            {
+    void Update()
+    {
+       
+    }
+
+    private void FixedUpdate()
+    {
+        foreach (Gun gun in guns)
+        {
             gun.isActive = gun.gameObject.activeSelf;
         }
-        
-	
-	}
+    }
 }

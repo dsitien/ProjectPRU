@@ -52,9 +52,10 @@ MonoBehaviour:
   isAutoShoot: 0
   timeShoot: 1
   timeDelay: 3
+  AnimationTime: 1
   isEnemy: 0
   powerUpRequirement: 0
-  effectGun: {fileID: 3662969501844118197, guid: 707c9d0de383f2b4380e9b4e059c5aa8, type: 3}
+  effectGun: {fileID: 3195466103524393979, guid: 836f67add07b296458e45391e020b4cf, type: 3}
 --- !u!120 &3225909377462613908
 LineRenderer:
   serializedVersion: 2
