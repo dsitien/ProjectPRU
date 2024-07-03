@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy")|| collision.CompareTag("Boss"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy"))
         {
             Destroy(gameObject);
             if (audioManager != null)
@@ -55,6 +55,15 @@ public class Bullet : MonoBehaviour
                 audioManager.PlaySFX("BulletDestroy");
             }
             Destroy(collision.gameObject);
+        } 
+        if (collision.CompareTag("Boss"))
+        {
+            Destroy(gameObject);
+            if (audioManager != null)
+            {
+                audioManager.PlaySFX("BulletDestroy");
+            }
+            
         }
     }
 }

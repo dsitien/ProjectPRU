@@ -11,9 +11,13 @@ public class MenuPlayQuit : MonoBehaviour
        
         SceneManager.LoadScene("MapGame1");
     }
-    public void Sound() {
+    public void Guide() {
        
-        SceneManager.LoadScene("SettingSound");
+        SceneManager.LoadScene("Guide");
+    }
+    public void AboutUs() {
+       
+        SceneManager.LoadScene("AboutUs");
     }
     public void Quit()
     {

@@ -8,15 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: d33d4e75aed69cc44bd76f868f70d831
-  - enabled: 0
-    path: Assets/Scenes/Story.unity
-    guid: 6caeb46882a492f40b1d3f6d85bf317c
-  - enabled: 0
-    path: Assets/Scenes/SettingSound.unity
-    guid: fd4d06bcb5ff547439e7e6a536bca7cb
-  - enabled: 0
-    path: Assets/Scenes/Sound.unity
-    guid: 9246ac937f8a4e04f9a2f6c5a5773822
   - enabled: 1
     path: Assets/Scenes/MapGame1.unity
     guid: c85454ddc88a9d04286114901d6edbae
@@ -26,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: fcb97987c921717438f639137b545c96
+  - enabled: 1
+    path: Assets/Scenes/AboutUs.unity
+    guid: d087c5fef43c8ab42abd15fbce8383f7
   m_configObjects: {}
