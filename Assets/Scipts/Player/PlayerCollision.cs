@@ -13,9 +13,19 @@ public class PlayerCollision : MonoBehaviour
 
     Gun[] guns;
     private GameObject ship;
+    private AudioManager audioManager;
 
     private void Start()
     {
+        GameObject audioManagerObject = GameObject.Find("AudioManager");
+        if (audioManagerObject != null)
+        {
+            audioManager = audioManagerObject.GetComponent<AudioManager>();
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager not found in the scene");
+        }
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         ship = GameObject.Find("Ship");
@@ -36,6 +46,10 @@ public class PlayerCollision : MonoBehaviour
         GunItem item = collision.GetComponent<GunItem>();
         if (collision.CompareTag("Item"))
         {
+            if (audioManager != null)
+            {
+                audioManager.PlaySFX("Heal");
+            }
             if (item.VP1)
             {
                 ActiveAllGun();
@@ -209,7 +223,10 @@ public class PlayerCollision : MonoBehaviour
             PlayerHeart.health = 0;
             Instantiate(explosion, transform.position, Quaternion.identity);
             GetComponent<PlayerMove>().enabled = false;
-
+            if (audioManager != null)
+            {
+                audioManager.PlaySFX("Dead");
+            }
             GameLoss gameLoss = GameObject.Find("LossGame").GetComponent<GameLoss>();
             gameLoss.TriggerGameLossPanelWithDelay(2f);
         }
@@ -225,6 +242,10 @@ public class PlayerCollision : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(6, 7, true);
         gethurt = true;
+        if (audioManager != null)
+        {
+            audioManager.PlaySFX("GiveDame");
+        }
         for (int i = 0; i < 8; i++)
         {
 
@@ -249,7 +270,12 @@ public class PlayerCollision : MonoBehaviour
 
     public void Heal()
     {
+
         PlayerHeart.health++;
+        if (audioManager != null)
+        {
+            audioManager.PlaySFX("Heal");
+        }
         if (PlayerHeart.health > 3)
         {
             PlayerHeart.health = 3;

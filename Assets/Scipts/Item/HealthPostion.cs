@@ -5,6 +5,7 @@ using UnityEngine;
 public class HealthPostion : MonoBehaviour
 {
     private PlayerCollision playerCollision;
+
     private void Awake()
     {
         GameObject ship = GameObject.Find("Ship");

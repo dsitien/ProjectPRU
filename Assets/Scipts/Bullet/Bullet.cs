@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy")|| collision.CompareTag("Boss"))
         {
             Destroy(gameObject);
             if (audioManager != null)
