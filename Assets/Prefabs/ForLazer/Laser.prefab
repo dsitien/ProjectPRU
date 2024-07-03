@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2640912366887525114}
   - component: {fileID: 4569109476049368028}
   - component: {fileID: 3225909377462613908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 576483337076289362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.14, y: 0.03, z: -1}
+  m_LocalPosition: {x: -1.14, y: 0.03, z: 0}
   m_LocalScale: {x: 0.93, y: 0.35, z: 0.51}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -64,7 +64,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576483337076289362}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -100,7 +100,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 2, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -117,8 +117,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.8150896
-        value: 0.26785553
+        time: 0.8368181
+        value: 0.32717407
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2925013543453802691}
   - component: {fileID: 8399905953790549094}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

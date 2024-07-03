@@ -85,7 +85,12 @@ public class Laser : MonoBehaviour
                         PlayerCollision ship = _hit.collider.GetComponent<PlayerCollision>();
                         if (ship != null)
                         {
-                            ship.hit();
+                            if (!ship.gethurt)
+                            {
+                                ship.hit();
+                            }
+
+
                         }
                     }
                 }

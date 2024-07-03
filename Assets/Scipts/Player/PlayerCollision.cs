@@ -219,17 +219,23 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
+
+   public bool gethurt = false;
     IEnumerator GetHurt()
     {
         Physics2D.IgnoreLayerCollision(6, 7, true);
-        for (int i = 0; i < 5; i++)
+        gethurt = true;
+        for (int i = 0; i < 8; i++)
         {
+
             SetTransparency(0.5f);
             yield return new WaitForSeconds(0.2f);
             SetTransparency(1f);
             yield return new WaitForSeconds(0.2f);
         }
         Physics2D.IgnoreLayerCollision(6, 7, false);
+        gethurt =false;
+
     }
 
     void SetTransparency(float alpha)
