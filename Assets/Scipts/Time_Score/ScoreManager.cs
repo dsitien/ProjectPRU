@@ -56,4 +56,8 @@ public class ScoreManager : MonoBehaviour
             Debug.LogError("Score Text UI element is not assigned!");
         }
     }
+    public int GetScore()
+    {
+        return score;
+    }
 }
