@@ -53,7 +53,7 @@ public class MapOne : MonoBehaviour
         {
             gameStarted = true;
             instructionPanel.SetActive(false);
-           
+            Timer.instance.StartTimer();
             StartCoroutine(StartMission());
         }
     }
