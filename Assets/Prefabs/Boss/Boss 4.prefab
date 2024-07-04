@@ -200,7 +200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1067818045621724970
 Transform:
   m_ObjectHideFlags: 0
@@ -541,6 +541,10 @@ PrefabInstance:
       propertyPath: autoShoot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
+      propertyPath: selectedBulletType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: m_Name
       value: GunSpecial
@@ -857,6 +861,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: autoShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
+      propertyPath: selectedBulletType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
