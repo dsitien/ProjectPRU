@@ -75,10 +75,7 @@ public class PlayerCollision : MonoBehaviour
                 ActiveAllGun4();
                 StartCoroutine(DisableAfterTime("VP4"));
             }
-            else
-            {
-                return;
-            }
+
 
             Destroy(item.gameObject);
         }
@@ -109,6 +106,7 @@ public class PlayerCollision : MonoBehaviour
                 DeactivateAllGun4();
                 break;
         }
+
     }
 
     private void ActiveAllGun()

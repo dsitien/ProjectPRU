@@ -2032,6 +2032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemShield
       objectReference: {fileID: 0}
+    - target: {fileID: 1882596751203357982, guid: cd9ffedf250cddd41a4d808e435574a2, type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
     - target: {fileID: 6395132718677036649, guid: cd9ffedf250cddd41a4d808e435574a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.6
