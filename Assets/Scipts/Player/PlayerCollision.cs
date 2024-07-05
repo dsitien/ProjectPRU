@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections;
-using Unity.Burst.Intrinsics;
+﻿using System.Collections;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class PlayerCollision : MonoBehaviour
 {
     public GameObject explosion;
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
-    private bool isShielded = false; // Biến để kiểm tra xem người chơi có đang trong trạng thái bảo vệ hay không
+    private bool isShielded = false;
 
-    Gun[] guns;
+    private Gun[] guns;
     private GameObject ship;
     private AudioManager audioManager;
+    private GameObject shieldObject;
 
     private void Start()
     {
@@ -30,18 +28,25 @@ public class PlayerCollision : MonoBehaviour
         originalColor = spriteRenderer.color;
         ship = GameObject.Find("Ship");
         guns = ship.GetComponentsInChildren<Gun>(true);
+
+        // Tìm đối tượng khiên
+        shieldObject = GameObject.Find("Shield"); // Đảm bảo tên của GameObject là "Shield"
+        if (shieldObject != null)
+        {
+            shieldObject.SetActive(false); // Đảm bảo khiên bắt đầu ở trạng thái tắt
+        }
+        else
+        {
+            Debug.LogWarning("Shield not found in the scene");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy") || collision.CompareTag("Boss"))
         {
             hit();
         }
-
-
-        //=========================================
 
         GunItem item = collision.GetComponent<GunItem>();
         if (collision.CompareTag("Item"))
@@ -70,12 +75,20 @@ public class PlayerCollision : MonoBehaviour
                 ActiveAllGun4();
                 StartCoroutine(DisableAfterTime("VP4"));
             }
+            else
+            {
+                return;
+            }
 
             Destroy(item.gameObject);
         }
 
+        if (collision.CompareTag("Shield"))
+        {
+            ActivateShield();
+            Destroy(collision.gameObject);
+        }
     }
-
 
     private IEnumerator DisableAfterTime(string vpType)
     {
@@ -96,10 +109,7 @@ public class PlayerCollision : MonoBehaviour
                 DeactivateAllGun4();
                 break;
         }
-
     }
-
-
 
     private void ActiveAllGun()
     {
@@ -110,7 +120,6 @@ public class PlayerCollision : MonoBehaviour
                 Debug.Log("start");
                 gun.gameObject.SetActive(true);
                 gun.isActive = true;
-
             }
         }
     }
@@ -124,11 +133,9 @@ public class PlayerCollision : MonoBehaviour
                 Debug.Log("start2");
                 gun.gameObject.SetActive(true);
                 gun.isActive = true;
-
             }
         }
     }
-
 
     private void ActiveAllGun3()
     {
@@ -139,7 +146,6 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-
     private void ActiveAllGun4()
     {
         foreach (Gun gun in guns)
@@ -149,12 +155,9 @@ public class PlayerCollision : MonoBehaviour
                 Debug.Log("start4");
                 gun.gameObject.SetActive(true);
                 gun.isActive = true;
-
             }
         }
     }
-
-    //====================================
 
     private void DeactivateAllGun()
     {
@@ -178,11 +181,9 @@ public class PlayerCollision : MonoBehaviour
                 Debug.Log("end2");
                 gun.gameObject.SetActive(false);
                 gun.isActive = false;
-
             }
         }
     }
-
 
     private void DeactivateAllGun3()
     {
@@ -202,21 +203,17 @@ public class PlayerCollision : MonoBehaviour
                 Debug.Log("end4");
                 gun.gameObject.SetActive(false);
                 gun.isActive = false;
-
             }
         }
     }
 
-
-
-
-
-
-    /// <summary>
-    /// /////////////////////////////////////////////
-    /// </summary>
     public void hit()
     {
+        if (isShielded)
+        {
+            return; // Bỏ qua va chạm nếu đang có khiên
+        }
+
         PlayerHeart.health--;
         if (PlayerHeart.health <= 0)
         {
@@ -236,8 +233,7 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-
-   public bool gethurt = false;
+    public bool gethurt = false;
     IEnumerator GetHurt()
     {
         Physics2D.IgnoreLayerCollision(6, 7, true);
@@ -248,15 +244,13 @@ public class PlayerCollision : MonoBehaviour
         }
         for (int i = 0; i < 8; i++)
         {
-
             SetTransparency(0.5f);
             yield return new WaitForSeconds(0.2f);
             SetTransparency(1f);
             yield return new WaitForSeconds(0.2f);
         }
         Physics2D.IgnoreLayerCollision(6, 7, false);
-        gethurt =false;
-
+        gethurt = false;
     }
 
     void SetTransparency(float alpha)
@@ -266,11 +260,8 @@ public class PlayerCollision : MonoBehaviour
         spriteRenderer.color = color;
     }
 
-
-
     public void Heal()
     {
-
         PlayerHeart.health++;
         if (audioManager != null)
         {
@@ -279,6 +270,36 @@ public class PlayerCollision : MonoBehaviour
         if (PlayerHeart.health > 3)
         {
             PlayerHeart.health = 3;
+        }
+    }
+
+    private void ActivateShield()
+    {
+        if (isShielded)
+        {
+            return; // Nếu đã có khiên, bỏ qua
+        }
+        if (audioManager != null)
+        {
+            audioManager.PlaySFX("Heal");
+        }
+        isShielded = true;
+        Physics2D.IgnoreLayerCollision(6, 7, true);
+        if (shieldObject != null)
+        {
+            shieldObject.SetActive(true);
+        }
+        StartCoroutine(ShieldDuration());
+    }
+
+    private IEnumerator ShieldDuration()
+    {
+        yield return new WaitForSeconds(8f);
+        isShielded = false;
+        Physics2D.IgnoreLayerCollision(6, 7, false);
+        if (shieldObject != null)
+        {
+            shieldObject.SetActive(false);
         }
     }
 }

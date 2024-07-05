@@ -1,14 +1,23 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BossNotifier : MonoBehaviour
 {
+    public bool enableNotifier = true;
+
     private void OnDestroy()
     {
-        // Find the WinGame script and call TriggerWinGamePanelWithDelay
-        WinGame winGameScript = FindObjectOfType<WinGame>();
-        if (winGameScript != null)
+        if (enableNotifier)
         {
-            winGameScript.TriggerWinGamePanelWithDelay(2f);
+            // Tìm script WinGame và gọi hàm TriggerWinGamePanelWithDelay
+            WinGame winGameScript = FindObjectOfType<WinGame>();
+            if (winGameScript != null)
+            {
+                winGameScript.TriggerWinGamePanelWithDelay(2f);
+            }
+            else
+            {
+                Debug.LogWarning("WinGame script not found in the scene.");
+            }
         }
     }
 }

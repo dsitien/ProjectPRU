@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7816263278356444014}
   - component: {fileID: 5503722429465418846}
   - component: {fileID: 3821890121281130241}
+  - component: {fileID: 3977993361896919164}
   m_Layer: 7
   m_Name: BulletEnemy
   m_TagString: BulletEnemy
@@ -175,3 +176,15 @@ MonoBehaviour:
   speed: 5
   velocity: {x: 0, y: 0}
   timeDestroy: 0
+--- !u!114 &3977993361896919164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628709178059576186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2352d701a4e6d47b3850d8039ea5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,7 +6,7 @@ public class EnemyCollision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("BulletPlayer") || collision.CompareTag("Player"))
+        if (collision.CompareTag("BulletPlayer") || collision.CompareTag("Player") || collision.CompareTag("Shield"))
         {
            
             Destroy(gameObject);

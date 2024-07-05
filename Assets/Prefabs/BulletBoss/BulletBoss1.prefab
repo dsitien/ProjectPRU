@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7922348830604782232}
   - component: {fileID: 3093782468173811584}
   - component: {fileID: -7236840010485565844}
+  - component: {fileID: 681370419696954524}
   m_Layer: 7
   m_Name: BulletBoss1
   m_TagString: BulletEnemy
@@ -169,3 +170,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &681370419696954524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081802718343399665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2352d701a4e6d47b3850d8039ea5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

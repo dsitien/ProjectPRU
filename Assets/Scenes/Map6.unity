@@ -322,7 +322,27 @@ PrefabInstance:
     - target: {fileID: 1265157346125936554, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 593695184}
+      objectReference: {fileID: 1370879518}
+    - target: {fileID: 1265157346125936554, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: time1
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265157346125936554, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: time2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265157346125936554, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: time3
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265157346125936554, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: time4
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265157346125936554, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: time5
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1265157346125936554, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
       propertyPath: playButton
       value: 
@@ -334,6 +354,30 @@ PrefabInstance:
     - target: {fileID: 1370898033388732508, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
       propertyPath: m_Name
       value: ManagerMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383773299066818838, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: timeMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336031595111493098, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 6121903187710758690, guid: 72a55d25860fb2c4d88faecec3e2294b, type: 3}
+    - target: {fileID: 3336031595111493098, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: maxEnemy
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030703767630187951, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: timeMin
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030703767630187951, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: maxEnemy
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400758856812982820, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+      propertyPath: timeMin
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -355,11 +399,6 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1909717881674316984, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
   m_PrefabInstance: {fileID: 2141740658}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &593695184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 445059153961946045, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
-  m_PrefabInstance: {fileID: 384507876}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &722301742 stripped
 MonoBehaviour:
@@ -606,6 +645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1370879518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1907942956499306744, guid: 194f4fc3b16e5ad45a5c2add56251308, type: 3}
+  m_PrefabInstance: {fileID: 384507876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1654563377 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8557622555992095540, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
@@ -1125,6 +1169,14 @@ PrefabInstance:
     - target: {fileID: 2230662923788255418, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356349409348211703, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1951452618}
+    - target: {fileID: 2356349409348211703, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Retry
       objectReference: {fileID: 0}
     - target: {fileID: 2763989937888591214, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: ship
