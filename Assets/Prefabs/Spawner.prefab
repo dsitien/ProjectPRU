@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2039112867111707269}
   - component: {fileID: 760883447966140949}
-  - component: {fileID: 1215658580392927389}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -78,16 +77,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &1215658580392927389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2661473468209022351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc31fa415950353468f284712c7aad8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 1946678831965387380, guid: d177c4a5ea380694893c8c385e0a6551, type: 3}

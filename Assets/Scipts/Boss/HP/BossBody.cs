@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class BossBody : MonoBehaviour
 {
@@ -100,7 +100,7 @@ public class BossBody : MonoBehaviour
         if (collision.CompareTag("BulletPlayer"))
         {
             Hit();
-            Debug.Log("hi");
+         
         }
 
 
@@ -115,7 +115,7 @@ public class BossBody : MonoBehaviour
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
 
-        Debug.Log("die");
+       
         // levelControler.instance.RemoveEnemy();
         Destroy(gameObject);
     }

@@ -12,6 +12,8 @@ TagManager:
   - Laser
   - Buff
   - Shield
+  - AudioManager
+  - Rock
   layers:
   - Default
   - TransparentFX

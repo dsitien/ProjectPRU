@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92eda47bdf78c2740a9dd727934a6e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   offsetDestroy: 1
   isActive: 1
 --- !u!114 &5496356038740947491
@@ -253,5 +253,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eadee211627aa57409bb33ebce1c863f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 3
   isActive: 0

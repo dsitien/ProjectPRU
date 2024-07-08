@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 49035250238473875}
   - component: {fileID: 856942070986923370}
-  - component: {fileID: 6394935638686449917}
   - component: {fileID: 7387265726052015248}
   - component: {fileID: 8476893336450579570}
   - component: {fileID: 8538694209921536103}
   - component: {fileID: 3894422992905871115}
   - component: {fileID: -7314019430732696390}
+  - component: {fileID: -232211250688001413}
   m_Layer: 7
   m_Name: Boss 3
   m_TagString: Boss
@@ -97,21 +97,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6394935638686449917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2290488127567890109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30e66d0aaa2658042906d228f2efd6c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 3
-  height: 3
-  speed: 3
 --- !u!95 &7387265726052015248
 Animator:
   serializedVersion: 5
@@ -234,6 +219,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a135834e4ec3e4e8de30d3163199d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableNotifier: 1
+--- !u!114 &-232211250688001413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2290488127567890109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af73dd9277dd2f4e9f265084f3a7a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!1 &4105210492634704888
 GameObject:
   m_ObjectHideFlags: 0

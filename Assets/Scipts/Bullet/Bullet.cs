@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public Vector2 direction = new Vector2(0, 1);
     public float speed;
     public Vector2 velocity;
+    public GameObject explosion;
 
     private AudioManager audioManager;
     void Start()
@@ -47,16 +48,24 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy"))
-        {
+        if (collision.CompareTag("BulletEnemy")){
+            Destroy(collision.gameObject);
+
             Destroy(gameObject);
+        }
+        if (collision.CompareTag("Enemy"))
+        {
+           
             if (audioManager != null)
             {
                 audioManager.PlaySFX("BulletDestroy");
             }
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
-        } 
-        if (collision.CompareTag("Boss"))
+
+            Destroy(gameObject);
+        }
+        if (collision.CompareTag("Boss") || collision.CompareTag("Rock"))
         {
             Destroy(gameObject);
             if (audioManager != null)

@@ -41,6 +41,7 @@ public class MenuPause : MonoBehaviour
     void RePlay()
     {
         Time.timeScale = 1;
+        StopAllCoroutines();
         SceneManager.LoadScene(nameScene);
     }
 }

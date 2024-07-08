@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 1764300053055733393}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,6 +317,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: bbc3000e7064ae34e80c49ba3d09bbb3, type: 3}
   - name: Map6
     clip: {fileID: 8300000, guid: c84190aae2a44284aa24fb6ae812ccda, type: 3}
+  - name: AboutUs
+    clip: {fileID: 8300000, guid: b485c58abdcda3b4ab20300f5c643096, type: 3}
+  - name: Guide
+    clip: {fileID: 8300000, guid: 779548f4411ca7941bb0b3ab9ac1e370, type: 3}
   sfxSounds:
   - name: Dead
     clip: {fileID: 8300000, guid: 2f138dce3f10a2a469c247bdbdf0e834, type: 3}
@@ -330,4 +334,4 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 189c07f4dad0a61458fd50d78fbf00f2, type: 3}
   musicSource: {fileID: 2897112731870974479}
   sfxSource: {fileID: 3582804709760569291}
-  musicName: Map6
+  musicName: Menu

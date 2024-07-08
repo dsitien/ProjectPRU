@@ -10,7 +10,7 @@ public class WinGame : MonoBehaviour
     public Text scoretxt; 
     public Text timetxt; 
     public Text bosstxt;
-    public int map;
+    public string map;
     public int requiredScore; 
     public float maxTime; 
     private int playerScore;

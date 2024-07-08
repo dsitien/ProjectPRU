@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6395132718677036649}
   - component: {fileID: 4332409312549573352}
   - component: {fileID: 585003078872744991}
-  - component: {fileID: 2783051495721942910}
   - component: {fileID: 4392351055436130360}
   m_Layer: 0
   m_Name: ItemShield
@@ -122,22 +121,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.475
---- !u!114 &2783051495721942910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882596751203357982}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb49f7ab065f4e4ea0dd158fe840d15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: 1}
-  speed: 2
-  velocity: {x: 0, y: 0}
-  timeDestroy: 0
 --- !u!114 &4392351055436130360
 MonoBehaviour:
   m_ObjectHideFlags: 0

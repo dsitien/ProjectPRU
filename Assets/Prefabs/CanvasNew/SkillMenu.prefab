@@ -450,13 +450,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 0}
   skillImg1: {fileID: 3026649224761358245}
-  cooldownQ: 10
+  cooldownQ: 30
   button1: {fileID: 2761976543400732083}
   skillImg2: {fileID: 7500222878749223890}
-  cooldownW: 5
+  cooldownW: 20
   button2: {fileID: 4792727442759452877}
   skillImg3: {fileID: 2274546812105829309}
-  cooldownE: 10
+  cooldownE: 15
   button3: {fileID: 5468668470898426720}
 --- !u!222 &8004007725446063298
 CanvasRenderer:

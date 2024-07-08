@@ -98,12 +98,48 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 945332677458207985, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360795278003062031, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428865515983813223, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765560006370428281, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2027566627343681861, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2089272615783776964, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2595341880965328087, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720076122651634692, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932457738735222725, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3098606760371762155, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459133571188532269, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3854748110130500159, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
@@ -114,12 +150,20 @@ PrefabInstance:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 1282533788856146355, guid: 56e8d3618f233984d8f6fc2638968e02, type: 3}
+    - target: {fileID: 4154555914707370746, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4163558811119460769, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
     - target: {fileID: 4683330343888834155, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849480193518076485, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5496686586949328249, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
@@ -134,8 +178,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6715559870944961425, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959474000776547611, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7301137550990775647, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981396707576907090, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8127908381735105751, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
@@ -144,6 +200,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8390201700230953195, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408837035109610346, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: shootEverySecond
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8840041587791885473, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}

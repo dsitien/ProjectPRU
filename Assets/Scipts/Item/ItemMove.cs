@@ -13,9 +13,9 @@ public class ItemMove : MonoBehaviour
     {
         if (timeDestroy == 0 || timeDestroy == null)
         {
-            timeDestroy = 20;
+            timeDestroy = 100;
         }
-        Destroy(gameObject, 20);
+        Destroy(gameObject, timeDestroy);
         //DontDestroyOnLoad(gameObject);
     }
 

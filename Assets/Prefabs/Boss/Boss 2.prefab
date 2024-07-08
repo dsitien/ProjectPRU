@@ -269,13 +269,14 @@ GameObject:
   - component: {fileID: 3844139756258684971}
   - component: {fileID: 5933493664002740907}
   - component: {fileID: 3102580707462111391}
+  - component: {fileID: -8185252614327539139}
   m_Layer: 7
   m_Name: Boss 2
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8970788951667682049
 Transform:
   m_ObjectHideFlags: 0
@@ -487,6 +488,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a135834e4ec3e4e8de30d3163199d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableNotifier: 1
+--- !u!114 &-8185252614327539139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6328102622786343746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af73dd9277dd2f4e9f265084f3a7a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!1001 &178347808018777772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +560,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: powerUpRequirement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
+      propertyPath: selectedBulletType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
@@ -617,13 +636,17 @@ PrefabInstance:
       propertyPath: autoShoot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
+      propertyPath: selectedBulletType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: m_Name
       value: GunSpecial
       objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -693,6 +716,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: powerUpRequirement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
+      propertyPath: selectedBulletType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
@@ -765,6 +792,10 @@ PrefabInstance:
       propertyPath: autoShoot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
+      propertyPath: selectedBulletType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: m_Name
       value: GunSpecial (2)
@@ -835,13 +866,17 @@ PrefabInstance:
       propertyPath: autoShoot
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7285779796260024765, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
+      propertyPath: selectedBulletType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: m_Name
       value: GunSpecial (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7740638126510604267, guid: e211cfe99633a1544af9d7248ee36ae0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -871,11 +906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2640912366887525114, guid: e8bc9635a8530a0479bcf66123de96f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 2640912366887525114, guid: e8bc9635a8530a0479bcf66123de96f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.05
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 2640912366887525114, guid: e8bc9635a8530a0479bcf66123de96f8, type: 3}
       propertyPath: m_LocalPosition.z

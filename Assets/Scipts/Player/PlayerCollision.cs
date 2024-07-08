@@ -43,7 +43,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy") || collision.CompareTag("Boss"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("BulletEnemy") || collision.CompareTag("Boss")|| collision.CompareTag("Rock"))
         {
             hit();
         }
@@ -89,7 +89,7 @@ public class PlayerCollision : MonoBehaviour
 
     private IEnumerator DisableAfterTime(string vpType)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
 
         switch (vpType)
         {
@@ -223,7 +223,7 @@ public class PlayerCollision : MonoBehaviour
                 audioManager.PlaySFX("Dead");
             }
             GameLoss gameLoss = GameObject.Find("LossGame").GetComponent<GameLoss>();
-            gameLoss.TriggerGameLossPanelWithDelay(2f);
+            gameLoss.TriggerGameLossPanelWithDelay(1f);
         }
         else
         {
@@ -292,7 +292,7 @@ public class PlayerCollision : MonoBehaviour
 
     private IEnumerator ShieldDuration()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(4f);
         isShielded = false;
         Physics2D.IgnoreLayerCollision(6, 7, false);
         if (shieldObject != null)

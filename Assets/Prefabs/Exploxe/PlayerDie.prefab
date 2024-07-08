@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4103767139738956988}
   - component: {fileID: 9186399531513807534}
   - component: {fileID: 7851666970992462580}
+  - component: {fileID: 4007259250258310743}
   m_Layer: 0
   m_Name: PlayerDie
   m_TagString: Untagged
@@ -106,3 +107,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4007259250258310743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282533788856146355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8387896e27c29de4cb7ca130dc441b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

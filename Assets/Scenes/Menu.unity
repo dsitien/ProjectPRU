@@ -671,6 +671,10 @@ PrefabInstance:
       propertyPath: musicName
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 1764300053055733393, guid: bb785cabf4bebb840bfbb9aac845712c, type: 3}
+      propertyPath: musicSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6fb716607f4aede4fb365658d7290762, type: 3}
     - target: {fileID: 5965383419634055539, guid: bb785cabf4bebb840bfbb9aac845712c, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -1149,6 +1153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b236c850b31aaba4abca0de81db34a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Map1
 --- !u!4 &926374701
 Transform:
   m_ObjectHideFlags: 0

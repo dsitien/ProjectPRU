@@ -20,12 +20,12 @@ public class UIControlSound : MonoBehaviour
 
     public void MusicVolumn()
     {
-        audio.MusicVolumn(_musicSlider.value);
+        audio.MusicVolume(_musicSlider.value);
 
     }  
     public void SfxVolumn()
     {
-        audio.SfxVolumn(_sfxSlider.value);
+        audio.SfxVolume(_sfxSlider.value);
 
     }
 }

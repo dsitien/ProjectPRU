@@ -121,7 +121,7 @@ public class SkillSystem : MonoBehaviour
                 gun.isActive = true;
             }
         }
-        StartCoroutine(DisableActiveQAfterDelay(cooldownQ / 2));
+        StartCoroutine(DisableActiveQAfterDelay(cooldownQ / 6));
     }
 
     void DisableActiveQ()
@@ -168,7 +168,7 @@ public class SkillSystem : MonoBehaviour
                 gun.isActive = true;
             }
         }
-        StartCoroutine(DisableActiveWAfterDelay(cooldownW / 2));
+        StartCoroutine(DisableActiveWAfterDelay(cooldownW / 4));
     }
 
     void DisableActiveW()
@@ -209,10 +209,10 @@ public class SkillSystem : MonoBehaviour
     {
         foreach (Gun gun in guns)
         {
-            gun.shootEverySecond = 0.25f;
+            gun.shootEverySecond = 0.2f;
             gun.isActive = true;
         }
-        StartCoroutine(DisableActiveEAfterDelay(cooldownE / 2));
+        StartCoroutine(DisableActiveEAfterDelay(cooldownE / 3));
     }
 
     void DisableActiveE()
@@ -221,11 +221,11 @@ public class SkillSystem : MonoBehaviour
         {
             if (gun.powerUpLvRequirement == 0)
             {
-                gun.shootEverySecond = 0.75f;
+                gun.shootEverySecond = 1.25f;
             }
             else
             {
-                gun.shootEverySecond = 0.5f;
+                gun.shootEverySecond = 1f;
             }
             gun.isActive = false;
         }

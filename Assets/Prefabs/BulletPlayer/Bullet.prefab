@@ -174,4 +174,4 @@ MonoBehaviour:
   direction: {x: 0, y: 1}
   speed: 4
   velocity: {x: 0, y: 0}
-  audioManager: {fileID: 1764300053055733393, guid: bb785cabf4bebb840bfbb9aac845712c, type: 3}
+  explosion: {fileID: 9156881351070953307, guid: fad494737e9efa148bc3f5ca6c0999f0, type: 3}

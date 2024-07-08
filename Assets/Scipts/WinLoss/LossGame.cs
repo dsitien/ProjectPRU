@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameLoss : MonoBehaviour
 {
     public GameObject gameLossPanel;
-    public int map;
+    public string map;
 
     private void Awake()
     {
