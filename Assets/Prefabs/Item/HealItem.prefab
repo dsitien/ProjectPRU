@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5985540280676059994}
   - component: {fileID: 5711551748597710581}
   - component: {fileID: 4026414046042736704}
+  - component: {fileID: -1356475029640650702}
   m_Layer: 0
   m_Name: HealItem
   m_TagString: Untagged
@@ -133,4 +134,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ce6e7cbafe7b045aa181ff33933f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCollision: {fileID: 0}
+--- !u!114 &-1356475029640650702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992595088388898024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b22a47a2d0aee04199336fa532f5fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  amptitude: 2
+  frequency: 2
+  inverted: 0

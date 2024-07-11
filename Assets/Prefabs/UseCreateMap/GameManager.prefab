@@ -48,7 +48,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 283315660756254233, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 428143862559602918, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -126,8 +126,16 @@ PrefabInstance:
       propertyPath: shootEverySecond
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2595341880965328087, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: powerUpLvRequirement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2720076122651634692, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
       propertyPath: shootEverySecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720076122651634692, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+      propertyPath: powerUpLvRequirement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2932457738735222725, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
@@ -215,6 +223,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 0}
     - {fileID: 7608764449544763519, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -29,11 +29,11 @@ public class PlayerCollision : MonoBehaviour
         ship = GameObject.Find("Ship");
         guns = ship.GetComponentsInChildren<Gun>(true);
 
-        // Tìm đối tượng khiên
-        shieldObject = GameObject.Find("Shield"); // Đảm bảo tên của GameObject là "Shield"
+       
+        shieldObject = GameObject.Find("Shield");
         if (shieldObject != null)
         {
-            shieldObject.SetActive(false); // Đảm bảo khiên bắt đầu ở trạng thái tắt
+            shieldObject.SetActive(false); 
         }
         else
         {
@@ -209,7 +209,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (isShielded)
         {
-            return; // Bỏ qua va chạm nếu đang có khiên
+            return; 
         }
 
         PlayerHeart.health--;
@@ -271,7 +271,7 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    private void ActivateShield()
+    public void ActivateShield()
     {
         if (isShielded)
         {

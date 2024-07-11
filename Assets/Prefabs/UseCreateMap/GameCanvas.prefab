@@ -230,7 +230,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -12.599, y: -92.983}
-  m_SizeDelta: {x: 556.76, y: 77.964}
+  m_SizeDelta: {x: 700, y: 77.964}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8621204360295307255
 CanvasRenderer:
@@ -1328,7 +1328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8494447504745076760, guid: cbf47d74c9e753740a461ac4c68faab3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1480,6 +1480,18 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 3409072432610348382}
+    - target: {fileID: 5294816179438132890, guid: 46eaae7e066a29a4f8ea3baa5dc062a6, type: 3}
+      propertyPath: cooldownE
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294816179438132890, guid: 46eaae7e066a29a4f8ea3baa5dc062a6, type: 3}
+      propertyPath: cooldownQ
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294816179438132890, guid: 46eaae7e066a29a4f8ea3baa5dc062a6, type: 3}
+      propertyPath: cooldownW
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5836636629070523264, guid: 46eaae7e066a29a4f8ea3baa5dc062a6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1518,11 +1530,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6867380238842660516, guid: 46eaae7e066a29a4f8ea3baa5dc062a6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 228
+      value: 326
       objectReference: {fileID: 0}
     - target: {fileID: 6867380238842660516, guid: 46eaae7e066a29a4f8ea3baa5dc062a6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -191
+      value: -237
       objectReference: {fileID: 0}
     - target: {fileID: 7792033785064352007, guid: 46eaae7e066a29a4f8ea3baa5dc062a6, type: 3}
       propertyPath: m_AnchorMax.y

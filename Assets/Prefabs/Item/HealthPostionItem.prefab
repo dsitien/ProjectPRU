@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4976203665904686482}
   - component: {fileID: 5525857826528609475}
   - component: {fileID: 195193204339987036}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPostionItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfd9e3948cfd49428deb96fb46b3cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCollision: {fileID: 0}
 --- !u!58 &5525857826528609475
 CircleCollider2D:
   m_ObjectHideFlags: 0

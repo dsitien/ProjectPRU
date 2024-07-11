@@ -93,6 +93,7 @@ public class MapDat_4_V2 : MonoBehaviour
 
         yield return new WaitForSeconds(time6);
         enemy5.SetActive(false);
+        yield return new WaitForSeconds(5f);
         boss.SetActive(true);
         item3.SetActive(true);
 

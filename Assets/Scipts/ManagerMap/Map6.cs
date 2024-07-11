@@ -16,21 +16,17 @@ public class Map6 : MonoBehaviour
     [SerializeField] GameObject item1;
     [SerializeField] GameObject item2;
     [SerializeField] GameObject item3;
-    [SerializeField] GameObject item4;
-    [SerializeField] GameObject item5;
-    [SerializeField] GameObject item6;
-    [SerializeField] GameObject item7;
-    [SerializeField] GameObject item8;
-    [SerializeField] GameObject item9;
+
+
 
     [Header("Time Delay")]
-    [SerializeField] float timeBoss1;
-    [SerializeField] float timeItem1;
-    [SerializeField] float timeBoss2;
-    [SerializeField] float timeItem2;
-    [SerializeField] float timeBoss3;
-    [SerializeField] float timeItem3;
-    [SerializeField] float timeItem4;
+    [SerializeField] float time1;
+    [SerializeField] float time2;
+    [SerializeField] float time3;
+    [SerializeField] float time4;
+    [SerializeField] float time5;
+    [SerializeField] float time6;
+    [SerializeField] float time7;
 
 
 
@@ -56,12 +52,6 @@ public class Map6 : MonoBehaviour
         item1.SetActive(false);
         item2.SetActive(false);
         item3.SetActive(false);
-        item4.SetActive(false);
-        item5.SetActive(false);
-        item6.SetActive(false);
-        item7.SetActive(false);
-        item8.SetActive(false);
-        item9.SetActive(false);
 
 
 
@@ -73,7 +63,7 @@ public class Map6 : MonoBehaviour
 
     public void OnPlayButtonClick()
     {
-        Debug.Log("hi");
+        
         if (!gameStarted)
         {
             gameStarted = true;
@@ -86,43 +76,34 @@ public class Map6 : MonoBehaviour
     private IEnumerator StartMission()
     {
         //Phase1
-        yield return new WaitForSeconds(timeBoss1);
+        yield return new WaitForSeconds(time1);
         boss1.SetActive(true);
 
-        yield return new WaitForSeconds(timeItem1);
+        yield return new WaitForSeconds(time2);
         item1.SetActive(true);
-        item2.SetActive(true);
-        item3.SetActive(true);
+
         //Phase2
-        yield return new WaitForSeconds(timeBoss2);
+        yield return new WaitForSeconds(time3);
         boss2.SetActive(true);
+
+
+
+
+        yield return new WaitForSeconds(time4);
+        item2.SetActive(true);
         item1.SetActive(false);
-        item2.SetActive(false);
-        item3.SetActive(false);
-
-
-        yield return new WaitForSeconds(timeItem2);
-        item4.SetActive(true);
-        item5.SetActive(true);
-        item6.SetActive(true);
         //Phase3
-        yield return new WaitForSeconds(timeBoss3);
+        yield return new WaitForSeconds(time5);
         boss3.SetActive(true);
-        item4.SetActive(false);
-        item5.SetActive(false);
-        item6.SetActive(false);
-
-        yield return new WaitForSeconds(timeItem3);
-        item7.SetActive(true);
-        item8.SetActive(true);
-        item9.SetActive(true);
-
-        yield return new WaitForSeconds(timeItem4);
-        item7.SetActive(false);
-        item8.SetActive(false);
-        item9.SetActive(false);
 
 
+        yield return new WaitForSeconds(time6);
+        item3.SetActive(true);
+        yield return new WaitForSeconds(time7);
+        item2.SetActive(false);
+
+        yield return new WaitForSeconds(5f);
+        item3.SetActive(false);
 
 
     }

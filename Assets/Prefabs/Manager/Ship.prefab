@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8126375969902381396}
   - component: {fileID: 8945192597187147646}
   - component: {fileID: 5131633468794461992}
-  - component: {fileID: 7608764449544763519}
   m_Layer: 6
   m_Name: Shield
   m_TagString: Untagged
@@ -143,18 +142,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.7
---- !u!114 &7608764449544763519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283315660756254233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76fbf066a03cbd34da880ecfab9b12f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4163558811119460769
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +158,6 @@ GameObject:
   - component: {fileID: 8796371783433224001}
   - component: {fileID: 4705179452154064277}
   - component: {fileID: 3967501826184392756}
-  - component: {fileID: 4881121304032756881}
   - component: {fileID: 3790489378173681206}
   m_Layer: 6
   m_Name: Ship
@@ -347,7 +333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addefd8db44308f45a6ea5f4f239aec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
 --- !u!114 &8796371783433224001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,20 +375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a727567d6f815f49887eeddb9bc8583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4881121304032756881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4163558811119460769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dedeb75f030df394eb6fc077b9a14566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 5
-  scoreTextObjectName: Score
+  explosion: {fileID: 0}
+  gethurt: 0
 --- !u!114 &3790489378173681206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8438005643162362144, guid: d20bc5dff9f221d418d0596c84dac5b2, type: 3}
       propertyPath: powerUpLvRequirement
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1455,7 +1428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8438005643162362144, guid: d20bc5dff9f221d418d0596c84dac5b2, type: 3}
       propertyPath: powerUpLvRequirement
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

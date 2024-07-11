@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-	[SerializeField] float moveSpeed;
+	
 	private bool isDragging;
 	private Camera mainCamera;
 

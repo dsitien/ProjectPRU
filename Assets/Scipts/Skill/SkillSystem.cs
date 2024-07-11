@@ -26,9 +26,16 @@ public class SkillSystem : MonoBehaviour
     bool isCooldown3 = false;
     public Button button3;
 
+   
+    private PlayerCollision playerCollision;
+
     private void Awake()
     {
         guns = ship.GetComponentsInChildren<Gun>(true);
+        playerCollision = ship.GetComponent<PlayerCollision>();
+        isCooldown1 = false;
+        isCooldown2 = false;
+        isCooldown3 = false;
 
         if (skillImg1 != null) skillImg1.fillAmount = 1;
         if (skillImg2 != null) skillImg2.fillAmount = 1;
@@ -40,8 +47,19 @@ public class SkillSystem : MonoBehaviour
         if (button1 != null) button1.interactable = !isCooldown1;
         if (button2 != null) button2.interactable = !isCooldown2;
         if (button3 != null) button3.interactable = !isCooldown3;
+
+       
+       
+    }
+    void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
+    void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
     void Update()
     {
         if (isCooldown1)
@@ -113,35 +131,27 @@ public class SkillSystem : MonoBehaviour
 
     public void ActiveQ()
     {
-        foreach (Gun gun in guns)
-        {
-            if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
-            {
-                gun.gameObject.SetActive(true);
-                gun.isActive = true;
-            }
-        }
-        StartCoroutine(DisableActiveQAfterDelay(cooldownQ / 6));
+        playerCollision.ActivateShield();
     }
 
-    void DisableActiveQ()
+   /* void DisableActiveQ()
     {
         foreach (Gun gun in guns)
         {
-            if (gun.powerUpLvRequirement == 1 || gun.powerUpLvRequirement == 2)
+            if (gun.powerUpLvRequirement == 1)
             {
                 gun.isActive = false;
                 gun.gameObject.SetActive(false);
             }
         }
-    }
+    }*/
 
-    private IEnumerator DisableActiveQAfterDelay(float delay)
+   /* private IEnumerator DisableActiveQAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         DisableActiveQ();
         Debug.Log("SkillQ deactivated after delay");
-    }
+    }*/
 
     public void SkillW()
     {

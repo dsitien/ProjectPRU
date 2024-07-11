@@ -16,7 +16,7 @@ public class WinGame : MonoBehaviour
     private int playerScore;
     public Button next;
 
-    private void Awake()
+    private void Start()
     {
         winGamePanel.SetActive(false);
         next.gameObject.SetActive(false);

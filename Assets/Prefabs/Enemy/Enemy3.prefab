@@ -192,7 +192,7 @@ MonoBehaviour:
   horizontalMovementScript: {fileID: 4070210679858647030}
   verticalMovementScript: {fileID: 6396501598351429063}
   distanceMin: 4
-  distanceMax: 12
+  distanceMax: 8
 --- !u!114 &466210493168195336
 MonoBehaviour:
   m_ObjectHideFlags: 0
