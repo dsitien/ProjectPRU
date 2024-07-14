@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9539406505c69c447a477b39299c2962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ship: {fileID: 0}
   VP1: 1
   VP2: 0
   VP3: 0
@@ -192,4 +191,4 @@ MonoBehaviour:
   direction: {x: 0, y: 1}
   speed: 3
   velocity: {x: 0, y: 0}
-  timeDestroy: 0
+  timeDestroy: 50

@@ -225,7 +225,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 7608764449544763519, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5496686586949328249, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+    - {fileID: 5616833395574775210, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+    - {fileID: 637719354154122421, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
+    - {fileID: 7301137550990775647, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e53674e898dbfc4aa82bd3191bfbde8, type: 3}
@@ -499,6 +503,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3427683048147098476, guid: 2f2c9066cfbdb5348b179ab99ad4e90d, type: 3}
+      propertyPath: Priority
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427683048147098476, guid: 2f2c9066cfbdb5348b179ab99ad4e90d, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202932226911400077, guid: 2f2c9066cfbdb5348b179ab99ad4e90d, type: 3}
+      propertyPath: Priority
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202932226911400077, guid: 2f2c9066cfbdb5348b179ab99ad4e90d, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7738951913791217271, guid: 2f2c9066cfbdb5348b179ab99ad4e90d, type: 3}
       propertyPath: musicName
       value: Map4
@@ -579,6 +599,10 @@ PrefabInstance:
     - target: {fileID: 5107456227332198572, guid: cf94951f77b6ea044bb30da13f6b5dd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456133031395042850, guid: cf94951f77b6ea044bb30da13f6b5dd4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7146571260564971455, guid: cf94951f77b6ea044bb30da13f6b5dd4, type: 3}
       propertyPath: m_Name

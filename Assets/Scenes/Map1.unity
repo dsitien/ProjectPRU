@@ -440,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 837589098427541494, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_Text
-      value: Reach 550 point
+      value: Reach 300 point
       objectReference: {fileID: 0}
     - target: {fileID: 880038931419271844, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_SizeDelta.x
@@ -480,7 +480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1909717881674316984, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1974603087177879315, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_IsActive
@@ -488,11 +488,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2029348385625463021, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 341.9092
+      value: 471.5931
       objectReference: {fileID: 0}
     - target: {fileID: 2029348385625463021, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -12.599
+      value: 41.54247
       objectReference: {fileID: 0}
     - target: {fileID: 2029348385625463021, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1131,8 +1131,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 550367137570496516, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550367137570496516, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 550367137570496516, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
+      propertyPath: m_TagString
+      value: Shield
       objectReference: {fileID: 0}
     - target: {fileID: 810669747558715084, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: musicName
@@ -2130,7 +2138,7 @@ MonoBehaviour:
   m_lineRenderer: {fileID: 1275794058474089665}
   isAutoShoot: 1
   timeShoot: 1
-  timeDelay: 3
+  timeDelay: 5
   AnimationTime: 1
   isEnemy: 1
   powerUpRequirement: 1
@@ -2358,7 +2366,7 @@ MonoBehaviour:
   time1: 2
   time2: 10
   time3: 10
-  time4: 10
+  time4: 15
   time5: 0
   instructionPanel: {fileID: 500187215}
   playButton: {fileID: 500187192}
@@ -2525,7 +2533,7 @@ MonoBehaviour:
   m_lineRenderer: {fileID: 57688863377343696}
   isAutoShoot: 1
   timeShoot: 1
-  timeDelay: 3
+  timeDelay: 5
   AnimationTime: 1
   isEnemy: 1
   powerUpRequirement: 1
@@ -2543,7 +2551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3093782468173811584, guid: da6ef09ed81d1af4490a71b8e95412fc, type: 3}
-  shootEverySecond: 1
+  shootEverySecond: 2
   canShoot: 1
   powerUpRequirement: 2
 --- !u!50 &1670031983124400197
@@ -2960,7 +2968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb304a5f77c49942b31bd809383b2c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 20
+  MaxHealth: 10
   currentHealth: 0
   explosion: {fileID: 3662969501844118197, guid: 707c9d0de383f2b4380e9b4e059c5aa8, type: 3}
   healthBarFill: {fileID: 1922658470062300447}
@@ -2978,7 +2986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3093782468173811584, guid: da6ef09ed81d1af4490a71b8e95412fc, type: 3}
-  shootEverySecond: 1
+  shootEverySecond: 2
   canShoot: 1
   powerUpRequirement: 0
 --- !u!212 &4139247214802273844
@@ -3160,7 +3168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3093782468173811584, guid: da6ef09ed81d1af4490a71b8e95412fc, type: 3}
-  shootEverySecond: 1
+  shootEverySecond: 2
   canShoot: 1
   powerUpRequirement: 0
 --- !u!1 &5136283446118617770
@@ -3413,7 +3421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3093782468173811584, guid: da6ef09ed81d1af4490a71b8e95412fc, type: 3}
-  shootEverySecond: 1
+  shootEverySecond: 2
   canShoot: 1
   powerUpRequirement: 2
 --- !u!95 &6169558585712279663
@@ -3765,7 +3773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3093782468173811584, guid: da6ef09ed81d1af4490a71b8e95412fc, type: 3}
-  shootEverySecond: 1
+  shootEverySecond: 2
   canShoot: 1
   powerUpRequirement: 0
 --- !u!1660057539 &9223372036854775807

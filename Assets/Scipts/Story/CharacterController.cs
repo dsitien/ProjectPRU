@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
-        // Giả sử chúng ta sử dụng phím mũi tên để di chuyển
+   
         if (Input.GetKey(KeyCode.RightArrow))
         {
             animator.Play("Run");

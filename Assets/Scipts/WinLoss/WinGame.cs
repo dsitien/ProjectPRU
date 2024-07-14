@@ -28,12 +28,8 @@ public class WinGame : MonoBehaviour
         winGamePanel.SetActive(true);
         Time.timeScale = 0f;
         bosstxt.color = Color.green;
-        // Lấy điểm người chơi từ một script khác (nếu cần)
         playerScore = FindObjectOfType<ScoreManager>().GetScore();
-
-        // Kiểm tra thời gian và cập nhật màu sắc văn bản
         float elapsedTime = Timer.instance.GetElapsedTime();
-
         if(elapsedTime > maxTime)
         {
             timetxt.color = Color.red;
@@ -51,7 +47,6 @@ public class WinGame : MonoBehaviour
         {
             timetxt.color = Color.green;
         }
-
         if (playerScore >= requiredScore && elapsedTime <= maxTime)
         {
             next.gameObject.SetActive(true);

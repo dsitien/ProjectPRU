@@ -7,6 +7,6 @@ public class CommonGame : MonoBehaviour
 {
     public void Quit()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 }

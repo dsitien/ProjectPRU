@@ -222,8 +222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1946678831965387380, guid: 2a4e58e0a2b3cb04e87d572c872cb114, type: 3}
-  maxEnemy: 10
-  timeMin: 0.2
+  maxEnemy: 8
+  timeMin: 0.4
   timeMax: 0.65
 --- !u!1001 &17818287
 PrefabInstance:
@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: autoShootDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3343396358423944221, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4422240308341188815, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
       propertyPath: bullet
       value: 
@@ -325,18 +329,30 @@ PrefabInstance:
       propertyPath: autoShootDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4422240308341188815, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5605420951784401498, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6042683428018738004, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
       propertyPath: MaxHealth
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6100790108353108966, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 9108952370297244782, guid: 27bf32058ad3cd04ba510cfe8f949ff9, type: 3}
+    - target: {fileID: 6100790108353108966, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
+      propertyPath: shootDelaySeconds
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100790108353108966, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
+      propertyPath: shootIntervalSeconds
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6130002527554394599, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
       propertyPath: m_Name
       value: Boss 4
@@ -1318,8 +1334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2056875606648300231, guid: d392d35f206ff694cb362e2e0a8662a6, type: 3}
-  maxEnemy: 10
-  timeMin: 0.2
+  maxEnemy: 8
+  timeMin: 0.4
   timeMax: 1.13
 --- !u!1 &707028396
 GameObject:
@@ -2807,8 +2823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2056875606648300231, guid: d392d35f206ff694cb362e2e0a8662a6, type: 3}
-  maxEnemy: 10
-  timeMin: 0.2
+  maxEnemy: 8
+  timeMin: 0.4
   timeMax: 1.75
 --- !u!1 &1773094077
 GameObject:
@@ -3023,8 +3039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1946678831965387380, guid: 2a4e58e0a2b3cb04e87d572c872cb114, type: 3}
-  maxEnemy: 10
-  timeMin: 0.2
+  maxEnemy: 8
+  timeMin: 0.4
   timeMax: 1.65
 --- !u!1001 &1879863164
 PrefabInstance:
@@ -3213,7 +3229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 275740640253976630, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_Volume
-      value: 0.03
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 550367137570496516, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_IsActive
@@ -3317,7 +3333,7 @@ PrefabInstance:
       objectReference: {fileID: 2039661457}
     - target: {fileID: 5744279228096039895, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_Volume
-      value: 0.022
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7749809552815540782, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_Name
@@ -3669,9 +3685,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 837589098427541494, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
+      propertyPath: m_Text
+      value: Reach 300 point
+      objectReference: {fileID: 0}
     - target: {fileID: 1283295715563571153, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1463352143773368035, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3691,7 +3711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1909717881674316984, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1974603087177879315, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_IsActive
@@ -3791,7 +3811,7 @@ PrefabInstance:
       objectReference: {fileID: 1502581029}
     - target: {fileID: 3146134634801267301, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_Value
-      value: 0.06
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3146134634801267301, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3851,7 +3871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5113674608793210370, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_Text
-      value: Reach 500 point
+      value: Reach 300 point
       objectReference: {fileID: 0}
     - target: {fileID: 5348435079330621910, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3889,6 +3909,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6622533484560011121, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
+      propertyPath: m_Text
+      value: Map 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6624514204960958516, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3911,7 +3935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7175126904555602833, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_Value
-      value: 0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7175126904555602833, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target

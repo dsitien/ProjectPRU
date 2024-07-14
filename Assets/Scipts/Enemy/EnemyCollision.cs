@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
 {
+    public GameObject explosion;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("BulletPlayer") || collision.CompareTag("Player") || collision.CompareTag("Shield"))
+        if (collision.CompareTag("BulletPlayer") || collision.CompareTag("Player"))
         {
-           
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

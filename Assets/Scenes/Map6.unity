@@ -295,6 +295,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 387.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2029348385625463021, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029348385625463021, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2168092397303655000, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_Text
       value: Destroy 3 Boss
@@ -405,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 431665905}
     - target: {fileID: 3146134634801267301, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_Value
-      value: 0.12
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3146134634801267301, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -442,6 +450,10 @@ PrefabInstance:
     - target: {fileID: 4004107580796374898, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_SizeDelta.x
       value: 712
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004107580796374898, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 4602321891321235572, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_AnchorMax.y
@@ -505,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7175126904555602833, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_Value
-      value: 0.11
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7175126904555602833, guid: b32debd96cdc469408e5ad11664ef686, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -637,7 +649,7 @@ PrefabInstance:
     - target: {fileID: 1893157242800281689, guid: 41144ab74361ca74f9c0412f7314912d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1ad1512ff8dace847ae1688557dfbe61, type: 2}
+      objectReference: {fileID: 2100000, guid: 3e98c5782f7852f438e94bc1b4dfd561, type: 2}
     - target: {fileID: 4190115382515438455, guid: 41144ab74361ca74f9c0412f7314912d, type: 3}
       propertyPath: m_Name
       value: Background
@@ -816,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042683428018738004, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
       propertyPath: MaxHealth
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6100790108353108966, guid: bba0216a256ccf94190fcb9f84fba01a, type: 3}
       propertyPath: shootDelaySeconds
@@ -1302,7 +1314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2836561751039212519, guid: 9809f9196d96d7b4a9a2674b5210462f, type: 3}
       propertyPath: MaxHealth
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2852758001091834846, guid: 9809f9196d96d7b4a9a2674b5210462f, type: 3}
       propertyPath: shootEverySecond
@@ -2236,7 +2248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 275740640253976630, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_Volume
-      value: 0.416
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 550367137570496516, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_Layer
@@ -2292,7 +2304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4709016485003174492, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: nameScene
-      value: Map5
+      value: Map6
       objectReference: {fileID: 0}
     - target: {fileID: 4709016485003174492, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: pausePanel
@@ -2348,7 +2360,7 @@ PrefabInstance:
       objectReference: {fileID: 1893860274}
     - target: {fileID: 5744279228096039895, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_Volume
-      value: 0.451
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7749809552815540782, guid: 58cd429e99244374d9242d2cda4731e2, type: 3}
       propertyPath: m_Name
@@ -2516,7 +2528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2005462656174856185, guid: 2cd9500f368446041ae76afa58600b00, type: 3}
       propertyPath: MaxHealth
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2053422103669440332, guid: 2cd9500f368446041ae76afa58600b00, type: 3}
       propertyPath: shootDelaySeconds

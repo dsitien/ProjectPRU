@@ -32,14 +32,10 @@ public class Gun : MonoBehaviour
         {
             Debug.LogWarning("AudioManager not found in the scene");
         }
-
-        // Ensure initial state of gun based on powerUpLvRequirement
-        SetGunState();
     }
 
     void OnEnable()
     {
-        // Ensure isActive state is handled properly when the object is enabled
         if (isActive)
         {
             StartShooting();
@@ -48,13 +44,11 @@ public class Gun : MonoBehaviour
 
     void OnDisable()
     {
-        // Stop shooting when the object is disabled
         StopShooting();
     }
 
     void Update()
     {
-        // Check isActive state and manage shooting coroutine
         if (isActive && shootingCoroutine == null)
         {
             StartShooting();
@@ -67,13 +61,11 @@ public class Gun : MonoBehaviour
 
     void StartShooting()
     {
-        // Start the shooting coroutine
         shootingCoroutine = StartCoroutine(Shooting());
     }
 
     void StopShooting()
     {
-        // Stop the shooting coroutine if it's running
         if (shootingCoroutine != null)
         {
             StopCoroutine(shootingCoroutine);
@@ -120,7 +112,7 @@ public class Gun : MonoBehaviour
         if (spriteIndex >= 0 && spriteIndex < bulletSprites.Count)
         {
             currentBulletSpriteIndex = spriteIndex;
-            SetGunState(); // Ensure gun state is updated after sprite change
+           
         }
         else
         {
@@ -128,12 +120,5 @@ public class Gun : MonoBehaviour
         }
     }
 
-    void SetGunState()
-    {
-        // Activate or deactivate the gun based on powerUpLvRequirement
-        bool shouldBeActive = (powerUpLvRequirement == 0); // Adjust this condition as needed
 
-        // Activate/deactivate the GameObject
-        gameObject.SetActive(shouldBeActive);
-    }
 }

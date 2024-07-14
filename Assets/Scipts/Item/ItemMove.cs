@@ -11,7 +11,7 @@ public class ItemMove : MonoBehaviour
 
     void Start()
     {
-        if (timeDestroy == 0 || timeDestroy == null)
+        if (timeDestroy == 0 )
         {
             timeDestroy = 100;
         }

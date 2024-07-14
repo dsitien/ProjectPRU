@@ -9,17 +9,16 @@ public class UpToDown : MonoBehaviour
 
     float sinCenterX;
     public float amptitude = 2;
-    //càng tăng đồ thị càng cao
-
+ 
     public float frequency = 2;
-    //càng tăng đồ thị càng co lại
-
+ 
     public bool inverted;
 
     // Start is called before the first frame update
     void Start()
     {
         sinCenterX = transform.position.x;
+        Destroy(gameObject,50f);
     }
 
     // Update is called once per frame

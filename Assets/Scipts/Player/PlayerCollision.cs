@@ -275,7 +275,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (isShielded)
         {
-            return; // Nếu đã có khiên, bỏ qua
+            return; 
         }
         if (audioManager != null)
         {

@@ -22,12 +22,9 @@ public class Bullet : MonoBehaviour
             Debug.LogWarning("AudioManager not found in the scene");
         }
 
-        Destroy(gameObject, 4);
-        //DontDestroyOnLoad(gameObject);
+        Destroy(gameObject, 3);
         velocity = direction * speed;
     }
-
-    // Update is called once per frame
     void Update()
     {
       
@@ -41,7 +38,6 @@ public class Bullet : MonoBehaviour
         transform.position = pos;
 
     }
-    //Destroy if go out camera
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
@@ -60,8 +56,6 @@ public class Bullet : MonoBehaviour
             {
                 audioManager.PlaySFX("BulletDestroy");
             }
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
 
             Destroy(gameObject);
         }
